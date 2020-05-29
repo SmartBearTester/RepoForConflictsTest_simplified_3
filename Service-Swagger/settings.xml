@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="9d419358-1386-4e38-9896-e9226dae04f2" name="Service Swagger" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="http://rapis02.aqa.com.ru/wcfrest/RIA-9609-3.0.2-swagger.json" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>defaultDescription</con:description>
+  <con:settings>
+    <con:setting id="9d419358-1386-4e38-9896-e9226dae04f2fileName">Service-Swagger</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="http://rapis02.aqa.com.ru/wcfrest/RIA-9609-3.0.2-swagger.json">
+    <con:part>
+      <con:url>http://rapis02.aqa.com.ru/wcfrest/RIA-9609-3.0.2-swagger.json</con:url>
+      <con:content><![CDATA[{
+  "openapi" : "3.0.2",
+  "info" : {
+    "title" : "defaultTitle",
+    "description" : "defaultDescription",
+    "version" : "3.0.2"
+  },
+  "servers" : [ {
+    "url" : "http://rapis02.aqa.com.ru"
+  } ],
+  "paths" : {
+    "/WCFREST/Service.svc/testLong" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/Stroka" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testChar" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/ConStroka" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "x",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "y",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testUlong" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/Date" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testComplexClass" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testClassTransferArray" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/getArrayInt" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testClassArray" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testSbyte" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testDecimal" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/InputDate" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "d",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testUshort" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testString" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/Vse" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "x",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "y",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "z",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testClassArrayInputArray" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/HelloWorld" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/testFloat" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "parameters" : [ {
+          "name" : "t",
+          "in" : "query",
+          "allowEmptyValue" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "text/html" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <head>\r\n    <title>Request Error</title>\r\n    <style>BODY { color: #000000; background-color: white; font-family: Verdana; margin-left: 0px; margin-top: 0px; } #content { margin-left: 30px; font-size: .70em; padding-bottom: 2em; } A:link { color: #336699; font-weight: bold; text-decoration: underline; } A:visited { color: #6699cc; font-weight: bold; text-decoration: underline; } A:active { color: #336699; font-weight: bold; text-decoration: underline; } .heading1 { background-color: #003366; border-bottom: #336699 6px solid; color: #ffffff; font-family: Tahoma; font-size: 26px; font-weight: normal;margin: 0em 0em 10px -20px; padding-bottom: 8px; padding-left: 30px;padding-top: 16px;} pre { font-size:small; background-color: #e5e5cc; padding: 5px; font-family: Courier New; margin-top: 0px; border: 1px #f0f0e0 solid; white-space: pre-wrap; white-space: -pre-wrap; word-wrap: break-word; } table { border-collapse: collapse; border-spacing: 0px; font-family: Verdana;} table th { border-right: 2px white solid; border-bottom: 2px white solid; font-weight: bold; background-color: #cecf9c;} table td { border-right: 2px white solid; border-bottom: 2px white solid; background-color: #e5e5cc;}</style>\r\n  </head>\r\n  <body>\r\n    <div id=\"content\">\r\n      <p class=\"heading1\">Request Error</p>\r\n      <p xmlns=\"\">The server encountered an error processing the request. Please see the <a rel=\"help-page\" href=\"http://rapis02.aqa.com.ru/WCFREST/Service.svc/help\">service help page</a> for constructing valid requests to the service.</p>\r\n    </div>\r\n  </body>\r\n</html>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    },
+    "/WCFREST/Service.svc/getArrayString" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://rapis02.aqa.com.ru"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://rapis02.aqa.com.ru"
+      } ]
+    }
+  }
+}]]></con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

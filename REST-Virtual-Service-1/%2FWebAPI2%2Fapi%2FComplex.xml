@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/WebAPI2/api/Complex" method="POST" resourcePath="/WebAPI2/api/Complex" id="5473ca58-465d-4cf2-855f-65cbe3fbda1b" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5473ca58-465d-4cf2-855f-65cbe3fbda1bfileName">%2FWebAPI2%2Fapi%2FComplex</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="453d950b-b773-4f6b-9fd8-642f9b438c6f" httpResponseStatus="200" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" mediaType="application/json" encoding="utf-8" dataSource="">
+    <con:settings/>
+    <con:responseContent>{"StrValue":"sample string 1","IntValue":2,"DoubleList":[1.1,2.1]}</con:responseContent>
+    <con:header>
+      <con:name>Cache-Control</con:name>
+      <con:value>no-cache</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Server</con:name>
+      <con:value>Microsoft-IIS/7.5</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-AspNet-Version</con:name>
+      <con:value>4.0.30319</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Pragma</con:name>
+      <con:value>no-cache</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Expires</con:name>
+      <con:value>-1</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>Fri, 29 May 2020 12:18:10 GMT</con:value>
+    </con:header>
+    <con:header>
+      <con:name>X-Powered-By</con:name>
+      <con:value>ASP.NET</con:value>
+    </con:header>
+  </con:response>
+</con:restMockAction>

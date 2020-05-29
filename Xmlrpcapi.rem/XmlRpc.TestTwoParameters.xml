@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:method name="XmlRpc.TestTwoParameters" help="         Two parameters       " id="ee8e5681-2bd4-4eb6-9cd4-71e698d1478c" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ee8e5681-2bd4-4eb6-9cd4-71e698d1478cfileName">XmlRpc.TestTwoParameters</con:setting>
+  </con:settings>
+  <con:call id="eca486f3-761c-47d7-a967-a2e72652880a" name="Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
+    <con:request><![CDATA[<methodCall>
+<methodName>XmlRpc.TestTwoParameters</methodName>
+<params>
+<param><value><int></int></value></param>
+<param><value><int></int></value></param>
+</params>
+</methodCall>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:resultParameter>int</con:resultParameter>
+  <con:parameter>int</con:parameter>
+  <con:parameter>int</con:parameter>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:method>

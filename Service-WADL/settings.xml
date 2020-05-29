@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="38c86753-f6c1-4dcd-8d8d-090bd681d875" wadlVersion="http://research.sun.com/wadl/2006/10" name="Service WADL" type="rest" definitionUrl="http://rapis02.aqa.com.ru/WebAPI2/WebAPI.wadl" basePath="/WebAPI2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="38c86753-f6c1-4dcd-8d8d-090bd681d875fileName">Service-WADL</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="http://rapis02.aqa.com.ru/WebAPI2/WebAPI.wadl">
+    <con:part>
+      <con:url>http://rapis02.aqa.com.ru/WebAPI2/WebAPI.wadl</con:url>
+      <con:content><![CDATA[<application xsi:schemaLocation="http://research.sun.com/wadl/2006/10 wadl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://research.sun.com/wadl/2006/10">
+  <resources base="http://rapis02.aqa.com.ru/WebAPI2/">
+    <resource path="api/Files/Upload">
+      <method name="POST">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/CC1946/GetHtml">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/SchemaCompliance/ArrayOfInt">
+      <method name="GET">
+        <request>
+          <param name="itemCount" type="xsd:integer" style="query"></param>
+        </request>
+      </method>
+    </resource>
+    <resource path="api/SchemaCompliance/ArrayOfString">
+      <method name="GET">
+        <request>
+          <param name="itemCount" type="xsd:integer" style="query"></param>
+        </request>
+      </method>
+    </resource>
+    <resource path="api/Integer">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Integer/{id}">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Integer">
+      <method name="GET">
+        <request>
+          <param name="x" type="xsd:integer" style="query"></param>
+          <param name="y" type="xsd:integer" style="query"></param>
+        </request>
+      </method>
+    </resource>
+    <resource path="api/Integer">
+      <method name="POST">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Integer/{id}">
+      <method name="PUT">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Integer/{id}">
+      <method name="DELETE">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Complex">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Complex/{id}">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Complex">
+      <method name="POST">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Complex/{id}">
+      <method name="PUT">
+        <request>
+          <param name="strValue" type="xsd:string" style="query"></param>
+          <param name="intValue" type="xsd:integer" style="query"></param>
+        </request>
+      </method>
+    </resource>
+    <resource path="api/Complex/{id}">
+      <method name="DELETE">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Values">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Values/{id}">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Values">
+      <method name="POST">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Values/{id}">
+      <method name="PUT">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/Values/{id}">
+      <method name="DELETE">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/String">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/String/{id}">
+      <method name="GET">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/String">
+      <method name="POST">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/String/{id}">
+      <method name="PUT">
+        <request/>
+      </method>
+    </resource>
+    <resource path="api/String/{id}">
+      <method name="DELETE">
+        <request/>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content>
+      <con:type>http://research.sun.com/wadl/2006/10</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8080/</con:endpoint>
+    <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

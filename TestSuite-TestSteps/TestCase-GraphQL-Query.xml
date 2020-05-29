@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2afecb1e-0037-4f4c-b4c4-ae354e0fa120" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase GraphQL Query" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2afecb1e-0037-4f4c-b4c4-ae354e0fa120fileName">TestCase-GraphQL-Query</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep name="GraphQL Query" type="graphqltestqueryrequest" id="da4917c7-6378-4049-9e29-08354db5b843">
+    <con:settings/>
+    <con:config interface="GraphQL Service 1" operationName="customer" operationType="query" xsi:type="con:GraphQLTestRequestWithSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:request name="GraphQL Query" id="5ea6e99b-843a-49e8-a0aa-d6bab4106e91">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
+        <con:request>{"query":"query {\n  customer(id: $my_query_variable_1) {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":{"my_query_variable_1":"qwerty"}}</con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:environmentSpec>
+          <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

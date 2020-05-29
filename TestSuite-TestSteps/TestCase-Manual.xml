@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="35b272b5-f0bf-4503-8296-65e39cedb67c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Manual" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="35b272b5-f0bf-4503-8296-65e39cedb67cfileName">TestCase-Manual</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="manualTestStep" name="Manual" id="635110eb-b45f-4f12-a12b-523bb9d59fc9">
+    <con:description>Text description of the actions to perform.</con:description>
+    <con:settings/>
+    <con:config xsi:type="con:ManualTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:expectedResult>Text description of the expected results.</con:expectedResult>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="" path="api/Integer/{id}" id="8726c9ca-afb4-41ef-9053-8f008cef7afb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8726c9ca-afb4-41ef-9053-8f008cef7afbfileName">api%2FInteger%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="" id="2f6d6594-e6cb-4034-be34-c073674adeeb" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="283ab5ed-7e69-4fe5-99a4-681432f1b6c5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>MyOauthJwt</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>MyOauthJwt</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="" id="941042f7-3f1f-48a3-af8a-3fbfaf92871c" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="85dbf339-484f-455b-a19e-2843838b5e9f" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="" id="9e80fcda-017d-431e-b43e-4550bac066d6" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="8607f244-19d3-4408-9957-0dee303bed3e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

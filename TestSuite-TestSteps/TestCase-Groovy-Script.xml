@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="96550e77-49bb-40dd-b0cf-ca44784c4e5e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Groovy Script" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="96550e77-49bb-40dd-b0cf-ca44784c4e5efileName">TestCase-Groovy-Script</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="groovy" name="Groovy Script" id="b787ee2c-26fe-4b38-96dc-1a4a965dd058">
+    <con:settings/>
+    <con:config>
+      <script><![CDATA[import com.smartbear.ready.core.ReadyApiCoreModule;
+import java.util.Properties;
+
+def getBuildDate()
+{
+	Properties buildInfoProperties = new Properties();
+	String buildTimestamp;
+	String version;
+	buildInfoProperties.load(ReadyApiCoreModule.class.getResourceAsStream(ReadyApiCoreModule.READY_API_BUILDINFO_PROPERTIES));
+	buildTimestamp = buildInfoProperties.getProperty("build.date");
+	version = ReadyApiCoreModule.getVersion();
+	return version + " Build Date: " + buildTimestamp;
+}
+
+def findFiles(String folderPath, String nameContains, String extension)
+{
+	def dir = new File(folderPath)
+	def foundFiles = dir.listFiles(new FilenameFilter()
+	{
+    		public boolean accept(File dir1, String name) 
+    		{
+       		return name.toLowerCase().endsWith(extension)&&name.toLowerCase().contains(nameContains.toLowerCase());
+    		}
+   	})
+   	return foundFiles;
+}
+
+def findValueInList(def list, def value)
+{
+ 	def i;
+ 	for (i = 0; i < list.length; i++)
+ 	  if (list[i].toLowerCase().contains(value.toLowerCase()))
+ 	  	return i;
+ 	return -1;  	
+}
+
+def getPerfValueFromString(String str, String perfValueName)
+{
+	def splitString = str.split("\r\n");
+	def captionsString = splitString[0];
+	def valuesString = splitString[1];
+	def captions = captionsString.split(",");
+	def values = valuesString.split(",");
+	def ind = findValueInList (captions, perfValueName);
+	if (ind > -1) return values[ind];
+	log.info("Value '" + perfValueName + "' is not found");
+	log.info(str);
+	return "";
+}
+
+def readScenarioResultsFromFiles(String folder, List files, List perfValues)
+{
+	def i, j;
+	def foundFiles;
+	def fileObj;
+	def fileString;
+	def CurValue;
+	List results = [];
+	results.add(getBuildDate());
+	for (i = 0; i < files.size; i++)
+	{
+		foundFiles = findFiles(folder, files[i], ".csv");
+		log.info foundFiles.toString();
+		for(j = 0; j < perfValues.size; j++)
+		{
+			if (foundFiles.length > 0) 
+			{
+				fileObj = new File(foundFiles[0].toString());
+				fileString = fileObj.getText('UTF-8').toString();
+				results.add(getPerfValueFromString(fileString, perfValues[j]));
+			}
+			else
+				results.add("");
+		}
+	}
+	return results;
+}
+
+def createJsonArray(List valuesArray)
+{
+	String result = "";
+	for (i = 0; i < valuesArray.size; i++)
+	{
+		result += "{\"userEnteredValue\": {\"stringValue\": \"" + valuesArray[i] + "\"}}, ";
+	}
+	return result;
+}
+
+def createReportJsonArray(List valuesArray)
+{
+	String result = "";
+	for (i = 0; i < valuesArray.size; i++)
+	{
+		//result += "{\"userEnteredValue\": {\"stringValue\": \"" + valuesArray[i] + "\"}}, ";
+		result += "{\"values\": [ {\"userEnteredValue\": {\"stringValue\": \"" + valuesArray[i] + "\"}} ] },";
+	}
+	return result;
+}
+
+def isArrayHasOnlyEmptyStrings(List array)
+{
+	for (i = 1; i < array.size; i++)
+		if (array[i] != "") return false;
+	return true;
+}
+
+List scenario1Files = [ "Scenario 1_perftest_report" ];
+List scenario3Files = [ "Scenario 3.1_perftest_report", "Scenario 3.2_perftest_report" ];
+List scenario4Files = [ "Scenario 4_perftest_report" ];
+List scenario5Files = [ "Scenario 5.1_perftest_report", "Scenario 5.2_perftest_report" ];
+List scenario6Files = [ "Scenario 6.1_perftest_report", "Scenario 6.2_perftest_report", "Scenario 6.3_perftest_report", "Scenario 6.4_perftest_report", "Scenario 6.5_perftest_report" ];
+List scenario7Files = [ "Scenario 7.1_perftest_report", "Scenario 7.2_perftest_report", "Scenario 7.3_perftest_report", "Scenario 7.4_perftest_report" ];
+List scenario8Files = [ "Scenario 8.1_perftest_report" ];
+List scenario8_2Files = ["Scenario 8.2_perftest_report" ];
+List scenario9Files = [ "Scenario 9.1_perftest_report", "Scenario 9.2_perftest_report", "Scenario 9.3_perftest_report", "Scenario 9.4_perftest_report", "Scenario 9.5_perftest_report", "Scenario 9.6_perftest_report"];
+List scenario10Files = [ "Scenario 10.1_perftest_report", "Scenario 10.2_perftest_report", "Scenario 10.3_perftest_report", "Scenario 10.4_perftest_report", "Scenario 10.5_perftest_report", "Scenario 10.6_perftest_report"];
+List scenario11Files = [ "Scenario 11.1_perftest_report", "Scenario 11.2_perftest_report", "Scenario 11.3_perftest_report", "Scenario 11.4_perftest_report"];
+List scenario12Files = [ "Scenario 12.1_perftest_report", "Scenario 12.2_perftest_report", "Scenario 12.3_perftest_report", "Scenario 12.4_perftest_report"];
+List scenario13Files = [ "Scenario 13_perftest_report" ];
+List scenario14Files = [ "Scenario 14.1_perftest_report", "Scenario 14.2_perftest_report", "Scenario 14.3_perftest_report", "Scenario 14.4_perftest_report"];
+
+List actionsPerfValues = ["Actions - Mean execution time","Threads count","Memory consumption Committed (MB)","Memory consumption Used (MB)","Memory consumption Max (MB)"];
+List actionsScenarioPerfValues = ["Actions - Mean execution time", "Scenario - Mean execution time","Threads count","Memory consumption Committed (MB)","Memory consumption Used (MB)","Memory consumption Max (MB)"];
+List startPagesPerfValues = ["Scenario - Mean execution time", "'Projects' tab open - Mean execution time", "'SoapUI' tab open - Mean execution time", "'LoadUI' tab open - Mean execution time", "'ServiceV' tab open - Mean execution time", "'Secure' tab open - Mean execution time","Threads count","Memory consumption Committed (MB)","Memory consumption Used (MB)","Memory consumption Max (MB)"];
+
+def sheetIdScenario1 = context.expand( '${#TestSuite#sheetIdScenario1}' );
+def sheetIdScenario2 = context.expand( '${#TestSuite#sheetIdScenario2}' );
+def sheetIdScenario3 = context.expand( '${#TestSuite#sheetIdScenario3}' );
+def sheetIdScenario4 = context.expand( '${#TestSuite#sheetIdScenario4}' );
+def sheetIdScenario5 = context.expand( '${#TestSuite#sheetIdScenario5}' );
+def sheetIdScenario6 = context.expand( '${#TestSuite#sheetIdScenario6}' );
+def sheetIdScenario7 = context.expand( '${#TestSuite#sheetIdScenario7}' );
+def sheetIdScenario8 = context.expand( '${#TestSuite#sheetIdScenario8}' );
+def sheetIdScenario8_2 = context.expand( '${#TestSuite#sheetIdScenario8_2}' );
+def sheetIdScenario9 = context.expand( '${#TestSuite#sheetIdScenario9}' );
+def sheetIdScenario10 = context.expand( '${#TestSuite#sheetIdScenario10}' );
+def sheetIdScenario11 = context.expand( '${#TestSuite#sheetIdScenario11}' );
+def sheetIdScenario12 = context.expand( '${#TestSuite#sheetIdScenario12}' );
+def sheetIdScenario13 = context.expand( '${#TestSuite#sheetIdScenario13}' );
+def sheetIdScenario14 = context.expand( '${#TestSuite#sheetIdScenario14}' );
+
+def reportSheetIdScenario1 = context.expand( '${#TestSuite#reportSheetIdScenario1}' );
+def reportSheetIdScenario3 = context.expand( '${#TestSuite#reportSheetIdScenario3}' );
+def reportSheetIdScenario4 = context.expand( '${#TestSuite#reportSheetIdScenario4}' );
+def reportSheetIdScenario5 = context.expand( '${#TestSuite#reportSheetIdScenario5}' );
+def reportSheetIdScenario6 = context.expand( '${#TestSuite#reportSheetIdScenario6}' );
+def reportSheetIdScenario7 = context.expand( '${#TestSuite#reportSheetIdScenario7}' );
+def reportSheetIdScenario8 = context.expand( '${#TestSuite#reportSheetIdScenario8}' );
+def reportSheetIdScenario8_2 = context.expand( '${#TestSuite#reportSheetIdScenario8_2}' );
+def reportSheetIdScenario9 = context.expand( '${#TestSuite#reportSheetIdScenario9}' );
+def reportSheetIdScenario10 = context.expand( '${#TestSuite#reportSheetIdScenario10}' );
+def reportSheetIdScenario11 = context.expand( '${#TestSuite#reportSheetIdScenario11}' );
+def reportSheetIdScenario12 = context.expand( '${#TestSuite#reportSheetIdScenario12}' );
+def reportSheetIdScenario13 = context.expand( '${#TestSuite#reportSheetIdScenario13}' );
+def reportSheetIdScenario14 = context.expand( '${#TestSuite#reportSheetIdScenario14}' );
+
+def resultsFolderPath = System.getProperty("user.home");
+def testCaseObj;
+def jsonArrayData;
+def valuesList;
+
+// Clear properties before run
+testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("jsonArrayData", "");
+testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("sheetId", "");
+testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("reportSheetId", "");
+testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("reportJsonArrayData", "");
+
+def getScenarioResults(String resultsPath, List resultsFiles, List resultsPerfValues, String sheetId, String reportSheetId)
+{
+	
+	valuesList = readScenarioResultsFromFiles(resultsPath, resultsFiles, resultsPerfValues);
+	if (!isArrayHasOnlyEmptyStrings(valuesList))
+	{
+		def jsonArrayData = createJsonArray(valuesList);
+		def reportJsonArrayData = createReportJsonArray(valuesList);
+		testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("jsonArrayData", jsonArrayData);
+		testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("sheetId", sheetId);
+		testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("reportJsonArrayData", reportJsonArrayData);
+		testRunner.testCase.testSuite.testCases["UploadData"].setPropertyValue("reportSheetId", reportSheetId);
+		def testCaseObj = testRunner.testCase.testSuite.testCases["UploadData"];
+		testCaseObj.run(null, false);
+	}
+}
+
+// Get Results for Scenario1
+getScenarioResults(resultsFolderPath, scenario1Files, actionsPerfValues, sheetIdScenario1, reportSheetIdScenario1);
+// Get Results for Scenario3
+getScenarioResults(resultsFolderPath, scenario3Files, actionsScenarioPerfValues, sheetIdScenario3, reportSheetIdScenario3);
+// Get Results for Scenario4
+getScenarioResults(resultsFolderPath, scenario4Files, startPagesPerfValues, sheetIdScenario4, reportSheetIdScenario4);
+// Get Results for Scenario5
+getScenarioResults(resultsFolderPath, scenario5Files, actionsScenarioPerfValues, sheetIdScenario5, reportSheetIdScenario5);
+// Get Results for Scenario6
+getScenarioResults(resultsFolderPath, scenario6Files, actionsScenarioPerfValues, sheetIdScenario6, reportSheetIdScenario6);
+// Get Results for Scenario7
+getScenarioResults(resultsFolderPath, scenario7Files, actionsScenarioPerfValues, sheetIdScenario7, reportSheetIdScenario7);
+// Get Results for Scenario8.1
+getScenarioResults(resultsFolderPath, scenario8Files, actionsScenarioPerfValues, sheetIdScenario8, reportSheetIdScenario8);
+// Get Results for Scenario8.2
+getScenarioResults(resultsFolderPath, scenario8_2Files, actionsScenarioPerfValues, sheetIdScenario8_2, reportSheetIdScenario8_2);
+// Get Results for Scenario9
+getScenarioResults(resultsFolderPath, scenario9Files, actionsScenarioPerfValues, sheetIdScenario9, reportSheetIdScenario9);
+// Get Results for Scenario10
+getScenarioResults(resultsFolderPath, scenario10Files, actionsScenarioPerfValues, sheetIdScenario10, reportSheetIdScenario10);
+// Get Results for Scenario11
+getScenarioResults(resultsFolderPath, scenario11Files, actionsScenarioPerfValues, sheetIdScenario11, reportSheetIdScenario11);
+// Get Results for Scenario12
+getScenarioResults(resultsFolderPath, scenario12Files, actionsScenarioPerfValues, sheetIdScenario12, reportSheetIdScenario12);
+// Get Results for Scenario13
+getScenarioResults(resultsFolderPath, scenario13Files, actionsScenarioPerfValues, sheetIdScenario13, reportSheetIdScenario13);
+// Get Results for Scenario14
+getScenarioResults(resultsFolderPath, scenario14Files, actionsPerfValues, sheetIdScenario14, reportSheetIdScenario14);]]></script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

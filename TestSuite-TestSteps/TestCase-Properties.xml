@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="03f0c9be-e237-4b40-9372-5497e6a5d0d6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Properties" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="03f0c9be-e237-4b40-9372-5497e6a5d0d6fileName">TestCase-Properties</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="properties" name="Properties" id="c0d73ab2-0ef2-465b-a6ac-5fa33386d740">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>my-property-1</con:name>
+          <con:value>qwerty</con:value>
+        </con:property>
+        <con:property>
+          <con:name>my-property-2</con:name>
+          <con:value>asdfgh</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="83e9120f-9512-4483-8dbd-d377808dc6c7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Create File" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="83e9120f-9512-4483-8dbd-d377808dc6c7fileName">TestCase-Create-File</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="CreateAndWaitForRemoveFile" name="Create File" id="b595ba57-6eee-49d2-a10c-63cec4c4284a">
+    <con:settings/>
+    <con:config>
+      <FileName>qwerty.txt</FileName>
+      <FileContent>asdfgh</FileContent>
+      <FolderPath>D:\Temp\Reports\</FolderPath>
+      <Timeout>666000</Timeout>
+      <WaitForFileRemove>true</WaitForFileRemove>
+      <OverwriteExisting>true</OverwriteExisting>
+      <FileEncoding>Unicode</FileEncoding>
+      <Precision>seconds</Precision>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

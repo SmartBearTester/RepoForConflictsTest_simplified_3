@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bb8d5a47-4d4f-4b83-bede-179c3370d49f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase SOAP Request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="bb8d5a47-4d4f-4b83-bede-179c3370d49ffileName">TestCase-SOAP-Request</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" id="944fdc78-4d00-4240-a022-c4f22a21a1e4" name="SOAP Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>Test_serviceSoap</con:interface>
+      <con:operation>Con_Stroka</con:operation>
+      <con:request name="SOAP Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="037e1857-2980-47c5-acbe-0ef5771a49f9">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:Con_Stroka>
+         <!--Optional:-->
+         <ser:x>Qwerty</ser:x>
+         <!--Optional:-->
+         <ser:y>Asdfgh</ser:y>
+      </ser:Con_Stroka>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="6d42b5ee-ab6f-4a3c-832d-85d4e26f9c53" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="00cd2de6-e1fa-44d4-8755-f019f247c862" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="f15fc2fa-a0d1-434f-abcc-f69bf4526104" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="1ffdd0e0-68d6-4f17-b3aa-9b9d6ceb6ff3" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/test_service/Service1.asmx/Con_Stroka"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>my-test-case-property-1</con:name>
+      <con:value>qwerty</con:value>
+    </con:property>
+    <con:property>
+      <con:name>my-test-case-property-2</con:name>
+      <con:value>asdfgh</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>393911e0-6c62-46cc-b219-566f4827ce81</con:tagId>
+  <con:tagId>12c9a20f-a9b4-4a3e-914f-d6c4b23c60e2</con:tagId>
+</con:testCase>

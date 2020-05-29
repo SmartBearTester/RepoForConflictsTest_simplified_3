@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="512c22ed-a1bf-405f-8c54-2a0ff17dfb99" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase TestComplete" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="512c22ed-a1bf-405f-8c54-2a0ff17dfb99fileName">TestCase-TestComplete</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="tcintegrationteststep" name="TestComplete" id="32bc39cd-b58a-41dd-a27e-b2defb3c3df1">
+    <con:settings/>
+    <con:config>
+      <timeout>1111</timeout>
+      <executionResult>0</executionResult>
+      <resultDescription/>
+      <testRunner>TestComplete 14</testRunner>
+      <runMode/>
+      <exportTestLog>D:\Temp\Reports\</exportTestLog>
+      <silentModeLog/>
+      <projectSuiteFile>D:\ReadyAPIProjects\All test steps 10 suites disabled virts\All-test-steps-project-all-parallel-disabled-virts\TestSuite1\TestCase1\TC10SuiteForRAPI\TC10SuiteForRAPI.pjs</projectSuiteFile>
+      <projectName/>
+      <scriptUnit/>
+      <scriptRoutine/>
+      <silentMode>false</silentMode>
+      <showTestLog>false</showTestLog>
+      <warningAsError>false</warningAsError>
+      <test/>
+      <otherTest/>
+      <otherArgs/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

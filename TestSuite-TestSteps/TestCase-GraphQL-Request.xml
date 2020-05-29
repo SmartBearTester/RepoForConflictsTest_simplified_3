@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0ee12e95-ebcd-4e27-97ee-79df918e7430" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase GraphQL Request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0ee12e95-ebcd-4e27-97ee-79df918e7430fileName">TestCase-GraphQL-Request</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="graphqltestrequest" name="GraphQL Request" id="6b71544b-5085-4bcd-b98e-a7b3aee81c8a">
+    <con:settings/>
+    <con:config xsi:type="con:GraphQLTestRequest" id="59c19935-9a1c-4694-80bc-c4184831a183" name="GraphQL Request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
+      <con:request>{"query":"query {\n  customer(id: $my_query_variable_1) {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":{"my_query_variable_1":"qwerty"}}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

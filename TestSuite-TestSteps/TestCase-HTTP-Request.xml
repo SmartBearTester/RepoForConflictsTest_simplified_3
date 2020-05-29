@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0c3cd143-c2d6-402e-b24a-975af32bdd20" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase HTTP Request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0c3cd143-c2d6-402e-b24a-975af32bdd20fileName">TestCase-HTTP-Request</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="httprequest" name="HTTP Request" id="09f663a8-b42e-405d-9888-f629a8da5450">
+    <con:settings/>
+    <con:config method="POST" xsi:type="con:HttpRequest" id="1fe8cc72-16de-42ca-be36-ad4cf8a64c52" name="HTTP Request" postQueryString="false" mediaType="application/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+      </con:settings>
+      <con:endpoint>http://rapis02.aqa.com.ru/WebAPI2/api/Complex</con:endpoint>
+      <con:request><![CDATA[<Complex xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/WebApi2.Models">
+  <DoubleList xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <d2p1:double>1.1</d2p1:double>
+    <d2p1:double>2.1</d2p1:double>
+  </DoubleList>
+  <IntValue>2</IntValue>
+  <StrValue>sample string 1</StrValue>
+</Complex>]]></con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>my-param-1</con:name>
+          <con:value>qwerty</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>qwerty</con:default>
+        </con:parameter>
+        <con:parameter>
+          <con:name>my-param-2</con:name>
+          <con:value>asdfgh</con:value>
+          <con:style>HEADER</con:style>
+          <con:default>asdfgh</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>b0aa68e1-aec9-4530-8925-daa582a8953d</con:tagId>
+  <con:tagId>c3ca40fa-1761-434a-8a36-70389f76b4e3</con:tagId>
+</con:testCase>

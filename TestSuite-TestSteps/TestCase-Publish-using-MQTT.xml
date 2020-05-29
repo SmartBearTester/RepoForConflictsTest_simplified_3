@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="31ab755d-4351-43d3-b037-b532229cfc60" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Publish using MQTT" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="31ab755d-4351-43d3-b037-b532229cfc60fileName">TestCase-Publish-using-MQTT</con:setting>
+  </con:settings>
+  <con:testStep type="MQTTPublishTestStep" name="Publish using MQTT" id="0267f97d-1c1b-443a-99b0-d4c8c8eaf228">
+    <con:settings/>
+    <con:config>
+      <LegacyConnection>false</LegacyConnection>
+      <ConnectionName>qwerty</ConnectionName>
+      <Timeout>30000</Timeout>
+      <TimeoutMeasure>Seconds</TimeoutMeasure>
+      <MessageKind>Json</MessageKind>
+      <Topic>qwerty</Topic>
+      <Message>{
+   "menu" : {
+      "id" : "file",
+      "value" : "File",
+      "popup" : {
+         "menuitem" : [
+            {
+               "value" : "New",
+               "onclick" : "CreateNewDoc()"
+            },
+            {
+               "value" : "Open",
+               "onclick" : "OpenDoc()"
+            },
+            {
+               "value" : "Close",
+               "onclick" : "CloseDoc()"
+            }
+         ]
+      }
+   }
+}</Message>
+      <QoS>0</QoS>
+      <Retained>false</Retained>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>b0aa68e1-aec9-4530-8925-daa582a8953d</con:tagId>
+  <con:tagId>393911e0-6c62-46cc-b219-566f4827ce81</con:tagId>
+  <con:tagId>b7d756ee-030a-4ed7-b7cf-3e1f47599572</con:tagId>
+</con:testCase>

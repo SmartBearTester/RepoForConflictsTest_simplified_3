@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0022ea0c-e67d-4a01-a4e8-7115f177c3c8" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase Assertion" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0022ea0c-e67d-4a01-a4e8-7115f177c3c8fileName">TestCase-Assertion</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" id="aa77441a-cb14-4400-9b25-5f6c162e2600" name="SOAP Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>Test_serviceSoap</con:interface>
+      <con:operation>Con_Stroka</con:operation>
+      <con:request name="SOAP Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="037e1857-2980-47c5-acbe-0ef5771a49f9">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:Con_Stroka>
+         <!--Optional:-->
+         <ser:x>Qwerty</ser:x>
+         <!--Optional:-->
+         <ser:y>Asdfgh</ser:y>
+      </ser:Con_Stroka>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="6d42b5ee-ab6f-4a3c-832d-85d4e26f9c53" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="00cd2de6-e1fa-44d4-8755-f019f247c862" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="f15fc2fa-a0d1-434f-abcc-f69bf4526104" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="1ffdd0e0-68d6-4f17-b3aa-9b9d6ceb6ff3" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/test_service/Service1.asmx/Con_Stroka"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="assertionteststep" name="Assertion" id="ba8bb60b-d03e-45c2-a790-32283f3f1fdd">
+    <con:settings/>
+    <con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:entry>
+        <con:id>dc89c9e3-d445-46b4-83f3-b775e1860111</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="Simple Contains" name="Contains" id="de6c86db-11fb-46dc-aa60-13cf10a1d6bc">
+          <con:configuration>
+            <token>qwerty</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+      <con:entry>
+        <con:id>2a493a86-962a-4d38-b57c-0acca10aad96</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="HTTP Header Exists" name="HTTP Header Exists" id="3bdb7ee4-afec-44b2-b64b-870395af97c9">
+          <con:configuration>
+            <Header>Host</Header>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+      <con:entry>
+        <con:id>32f7870b-f449-475d-b432-8709573c8294</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="Response SLA Assertion" name="Response SLA" id="be5c28f8-8bd2-4a6d-8287-ea12db6326df">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+      <con:entry>
+        <con:id>5affeae4-3621-4174-afbe-c230218ae6eb</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault" id="407ee4dc-01af-469b-bb90-455594dea69a"/>
+      </con:entry>
+      <con:entry>
+        <con:id>a69f827b-3e36-4adf-a2b2-f19b0cdfb86a</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="MessageContentAssertion" name="Message Content Assertion" id="b6d3cb67-b7e1-4063-8b4b-320a33bb6d01">
+          <con:configuration xsi:type="con:MessageContentAssertion">
+            <con:elements>
+              <con:xpath>declare namespace ns1='http://localhost/test_service/Service1.asmx';
+//ns1:Con_StrokaResponse[1]/ns1:Con_StrokaResult[1]</con:xpath>
+              <con:element>Con_StrokaResult</con:element>
+              <con:type>XmlString</con:type>
+              <con:operator>=</con:operator>
+              <con:enabled>true</con:enabled>
+              <con:expectedValue>Qwerty Asdfgh</con:expectedValue>
+              <con:numberType>false</con:numberType>
+            </con:elements>
+            <con:originalMessage><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <Con_StrokaResponse xmlns="http://localhost/test_service/Service1.asmx">
+         <Con_StrokaResult>Qwerty Asdfgh</Con_StrokaResult>
+      </Con_StrokaResponse>
+   </soap:Body>
+</soap:Envelope>]]></con:originalMessage>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+      <con:entry>
+        <con:id>eb57ec25-c683-4c4f-a43f-ae7874378fae</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="7b88cbaa-017e-489e-aa1b-1bfb776b5307">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+      <con:entry>
+        <con:id>6b1bb46f-b5d2-4f92-8ef7-8bb6a6264948</con:id>
+        <con:isGroup>false</con:isGroup>
+        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
+        <con:propertyName>Response</con:propertyName>
+        <con:assertion type="XPath Match" name="XPath Match" id="686fea91-6420-41a9-a3ce-5346bae1dcb1">
+          <con:configuration>
+            <path>declare namespace ns1='http://localhost/test_service/Service1.asmx';
+//ns1:Con_StrokaResponse[1]/ns1:Con_StrokaResult[1]</path>
+            <content>Qwerty Asdfgh</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+      </con:entry>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>ba8bb60b-d03e-45c2-a790-32283f3f1fdd</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="fd3bfa5c-8fba-47de-a431-619a9ba0c334" isOneWay="false" action="http://localhost/test_service/Service1.asmx/Ran_XML" name="Ran_XML" bindingOperationName="Ran_XML" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fd3bfa5c-8fba-47de-a431-619a9ba0c334fileName">Ran_XML</con:setting>
+  </con:settings>
+  <con:call id="2063f1ac-40f2-4883-8e6b-1da6e65e925b" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://localhost/test_service/Service1.asmx">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ser:Ran_XML>\r
+         <ser:x>?</ser:x>\r
+      </ser:Ran_XML>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/test_service/Service1.asmx/Test_serviceSoap/Ran_XMLRequest"/>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

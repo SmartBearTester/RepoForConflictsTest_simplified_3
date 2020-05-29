@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:method name="XmlRpc.TestBase64" help="         Base64       " id="b4f5dbd0-244a-4da3-8c73-517e351aaa85" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b4f5dbd0-244a-4da3-8c73-517e351aaa85fileName">XmlRpc.TestBase64</con:setting>
+  </con:settings>
+  <con:call id="3a546777-1e83-4e4b-9e28-80f6026af563" name="Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
+    <con:request><![CDATA[<methodCall>
+<methodName>XmlRpc.TestBase64</methodName>
+<params>
+<param><value><base64></base64></value></param>
+</params>
+</methodCall>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:resultParameter>base64</con:resultParameter>
+  <con:parameter>base64</con:parameter>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:method>

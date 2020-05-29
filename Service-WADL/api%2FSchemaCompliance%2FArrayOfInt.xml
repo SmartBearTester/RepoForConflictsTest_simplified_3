@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="" path="api/SchemaCompliance/ArrayOfInt" id="3551968d-2e72-447c-8155-2e43b8fb4f58" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3551968d-2e72-447c-8155-2e43b8fb4f58fileName">api%2FSchemaCompliance%2FArrayOfInt</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="" id="8bff0d90-3314-4dd7-b385-08a689f6e4d1" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>itemCount</con:name>
+        <con:value xsi:nil="true"/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</con:type>
+        <con:default xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="5bb9882b-3ca3-4d53-a363-4b7dcc60e45b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>MyNtlmAuth</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>MyNtlmAuth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

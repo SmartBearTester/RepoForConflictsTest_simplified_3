@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="41e257e4-c0ad-4781-8b44-9aacd14c3154" created="3.2.0" activeEnvironment="Default environment" name="project-for-git-conflicts-test" updated="3.2.0" encryptionMode="Not encrypted" resourceRoot="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="MQTTConnections"><![CDATA[<xml-fragment>
+  <Connection>
+    <Name>mosquitto</Name>
+    <ServerURI>mosquitto.org</ServerURI>
+    <caCrtFile/>
+    <crtFile/>
+    <keyFile/>
+    <keysPassword/>
+    <sniHost/>
+    <ClientID>qwerty</ClientID>
+    <CleanSession>false</CleanSession>
+  </Connection>
+  <Connection>
+    <Name>qwerty</Name>
+    <ServerURI>qwerty</ServerURI>
+    <caCrtFile/>
+    <crtFile/>
+    <keyFile/>
+    <keysPassword/>
+    <sniHost/>
+    <ClientID>asdfgh</ClientID>
+    <CleanSession>false</CleanSession>
+    <Login>qwerty</Login>
+    <EncrPassword>553246736447566B583139434D733568774343384F75524A37584A2F4D624957</EncrPassword>
+    <WillTopic>qwerty</WillTopic>
+    <WillMessageType>Json</WillMessageType>
+    <WillMessage>qwerty</WillMessage>
+    <WillQos>0</WillQos>
+    <WillRetained>false</WillRetained>
+  </Connection>
+</xml-fragment>]]></con:setting>
+    <con:setting id="41e257e4-c0ad-4781-8b44-9aacd14c3154fileName">project-for-git-conflicts-test</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>my-project-property-1</con:name>
+      <con:value>qwerty</con:value>
+    </con:property>
+    <con:property>
+      <con:name>my-project-property-2</con:name>
+      <con:value>asdfgh</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>MSSQL</con:name>
+      <con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver>
+      <con:connectionString>jdbc:sqlserver://rapis01.aqa.com.ru:1433;databaseName=DatabaseVariable;user=DatabaseVariable;password=PASS_VALUE</con:connectionString>
+      <con:password>DatabaseVariable</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+    <con:databaseConnection>
+      <con:name>Postgre</con:name>
+      <con:driver>org.postgresql.Driver</con:driver>
+      <con:connectionString>jdbc:postgresql://rapis01.aqa.com.ru:5432/DatabaseVariable?user=DatabaseVariable&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>DatabaseVariable</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
+  <con:jmsConnectionContainer>
+    <con:jmsConnection>
+      <con:name>ActiveMQ</con:name>
+      <con:connectorLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
+      <con:providerUrl>tcp://localhost:61616</con:providerUrl>
+      <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+      <con:username/>
+      <con:password/>
+      <con:extraProperties>
+        <con:property>
+          <con:name>queue.Q1</con:name>
+          <con:value>Q1</con:value>
+        </con:property>
+        <con:property>
+          <con:name>queue.Q2</con:name>
+          <con:value>Q2</con:value>
+        </con:property>
+      </con:extraProperties>
+    </con:jmsConnection>
+  </con:jmsConnectionContainer>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>MyOauth20</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:idToken>asdfgh</con:idToken>
+      <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
+      <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>MyOauthJwt</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:idToken>asdfgh</con:idToken>
+      <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
+      <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:oAuth1ProfileContainer>
+    <con:oAuth1Profile>
+      <con:name>MyOauth10</con:name>
+      <con:type>OAuth 1.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:tokenSecret>asdfgh</con:tokenSecret>
+      <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>
+      <con:tokenSecretStartingStatus>ENTERED_MANUALLY</con:tokenSecretStartingStatus>
+    </con:oAuth1Profile>
+  </con:oAuth1ProfileContainer>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="18faa61a-6d45-42b4-9706-7812ec74b1a6" name="EmptyEnv" index="0">
+    <con:service type="SOAP" name="Test_serviceSoap">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="SOAP" name="Test_serviceSoap12">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Service WADL">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Service Swagger">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="GraphQL" name="GraphQL Service 1">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:property>
+      <con:name>my-project-property-1</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>my-project-property-2</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>MSSQL</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Postgre</con:name>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer>
+      <con:jmsConnection>
+        <con:name>ActiveMQ</con:name>
+        <con:extraProperties/>
+      </con:jmsConnection>
+    </con:jmsConnectionContainer>
+  </con:environment>
+  <con:environment id="13b59651-66de-4c68-940f-45d0a507fba6" name="MyEnv" index="1">
+    <con:service type="SOAP" name="Test_serviceSoap">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+    </con:service>
+    <con:service type="SOAP" name="Test_serviceSoap12">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Service WADL">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8080/</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Service Swagger">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru</con:endpoint>
+    </con:service>
+    <con:service type="GraphQL" name="GraphQL Service 1">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>my-project-property-1</con:name>
+      <con:value>qwerty</con:value>
+    </con:property>
+    <con:property>
+      <con:name>my-project-property-2</con:name>
+      <con:value>asdfgh</con:value>
+    </con:property>
+    <con:databaseConnectionContainer>
+      <con:databaseConnection>
+        <con:name>MSSQL</con:name>
+        <con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver>
+        <con:connectionString>jdbc:sqlserver://rapis01.aqa.com.ru:1433;databaseName=DatabaseVariable;user=DatabaseVariable;password=PASS_VALUE</con:connectionString>
+        <con:password>DatabaseVariable</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+      <con:databaseConnection>
+        <con:name>Postgre</con:name>
+        <con:driver>org.postgresql.Driver</con:driver>
+        <con:connectionString>jdbc:postgresql://rapis01.aqa.com.ru:5432/DatabaseVariable?user=DatabaseVariable&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>DatabaseVariable</con:password>
+        <con:connectionProperties/>
+      </con:databaseConnection>
+    </con:databaseConnectionContainer>
+    <con:jmsConnectionContainer>
+      <con:jmsConnection>
+        <con:name>ActiveMQ</con:name>
+        <con:connectorLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
+        <con:providerUrl>tcp://localhost:61616</con:providerUrl>
+        <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+        <con:username/>
+        <con:password/>
+        <con:extraProperties>
+          <con:property>
+            <con:name>queue.Q1</con:name>
+            <con:value>Q1</con:value>
+          </con:property>
+          <con:property>
+            <con:name>queue.Q2</con:name>
+            <con:value>Q2</con:value>
+          </con:property>
+        </con:extraProperties>
+      </con:jmsConnection>
+    </con:jmsConnectionContainer>
+  </con:environment>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>MyBasicAuth</con:name>
+      <con:type>Basic</con:type>
+      <con:username>qwerty</con:username>
+      <con:password>asdfgh</con:password>
+      <con:domain/>
+    </con:basicAuthEntry>
+    <con:digestAuthEntry>
+      <con:name>MyDigestAuth</con:name>
+      <con:type>Digest</con:type>
+      <con:username>qwerty</con:username>
+      <con:password>asdfgh</con:password>
+      <con:domain>zxcvbn</con:domain>
+    </con:digestAuthEntry>
+    <con:ntlmAuthEntry>
+      <con:name>MyNtlmAuth</con:name>
+      <con:type>NTLM</con:type>
+      <con:username>qwerty</con:username>
+      <con:password>asdfgh</con:password>
+      <con:domain>zxcvbn</con:domain>
+    </con:ntlmAuthEntry>
+    <con:kerberosAuthEntry>
+      <con:name>MyKerberosAuth</con:name>
+      <con:type>SPNEGO/Kerberos</con:type>
+      <con:username>qwerty</con:username>
+      <con:password>asdfgh</con:password>
+      <con:domain>zxcvbn</con:domain>
+    </con:kerberosAuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>MyOauth20</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:idToken>asdfgh</con:idToken>
+      <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
+      <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>MyOauthJwt</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:idToken>asdfgh</con:idToken>
+      <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
+      <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AzureAuthEntry>
+      <con:name>MyOauth20Azure</con:name>
+      <con:type>OAuth 2.0 (Azure)</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:idToken>asdfgh</con:idToken>
+      <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
+      <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
+    </con:oAuth20AzureAuthEntry>
+    <con:oAuth10AuthEntry>
+      <con:name>MyOauth10</con:name>
+      <con:type>OAuth 1.0</con:type>
+      <con:accessToken>qwerty</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:tokenSecret>asdfgh</con:tokenSecret>
+      <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>
+      <con:tokenSecretStartingStatus>ENTERED_MANUALLY</con:tokenSecretStartingStatus>
+    </con:oAuth10AuthEntry>
+  </con:authRepository>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags>
+    <con:tag>
+      <con:id>393911e0-6c62-46cc-b219-566f4827ce81</con:id>
+      <con:name>MyTag1</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>12c9a20f-a9b4-4a3e-914f-d6c4b23c60e2</con:id>
+      <con:name>MyTag2</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>4e81e05f-149b-47d7-88e0-4d7ca642b349</con:id>
+      <con:name>MyTag3</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>6c666dcf-4d6c-4a77-9f77-8007a7f63614</con:id>
+      <con:name>666</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>b7d756ee-030a-4ed7-b7cf-3e1f47599572</con:id>
+      <con:name>777</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>c3ca40fa-1761-434a-8a36-70389f76b4e3</con:id>
+      <con:name>qwerty</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>2b8ede4b-a784-45ff-9b70-6ea701c30a19</con:id>
+      <con:name>asdfgh</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>b0aa68e1-aec9-4530-8925-daa582a8953d</con:id>
+      <con:name>zxcvbn</con:name>
+    </con:tag>
+  </con:tags>
+</con:soapui-project>

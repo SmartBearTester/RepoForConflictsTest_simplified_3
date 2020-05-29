@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="6a000a87-7e56-48b4-8fb7-1cb68c2c1060" isOneWay="false" action="http://localhost/test_service/Service1.asmx/Date_XML" name="Date_XML" bindingOperationName="Date_XML" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6a000a87-7e56-48b4-8fb7-1cb68c2c1060fileName">Date_XML</con:setting>
+  </con:settings>
+  <con:call id="1c6a6672-5489-4b03-bba7-904f48026eee" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:Date_XML/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>MyDigestAuth</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost/test_service/Service1.asmx/Date_XML"/>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+        <con:authProfile>MyDigestAuth</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:operation>

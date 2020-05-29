@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="" path="api/SchemaCompliance/ArrayOfString" id="ac2adc4a-8aeb-4534-8982-e05e1a9c0a9a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ac2adc4a-8aeb-4534-8982-e05e1a9c0a9afileName">api%2FSchemaCompliance%2FArrayOfString</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="" id="0831950b-bbfe-4922-8bf1-a316f9dba5dc" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>itemCount</con:name>
+        <con:value xsi:nil="true"/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</con:type>
+        <con:default xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="e2b6e758-3c16-46c7-a0d0-c3f65afe456d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>MyKerberosAuth</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+          <con:authProfile>MyKerberosAuth</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

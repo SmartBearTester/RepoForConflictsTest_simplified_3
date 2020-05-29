@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="01df4d57-6766-49c4-8127-be57300d26f5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase REST Request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="01df4d57-6766-49c4-8127-be57300d26f5fileName">TestCase-REST-Request</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="a9b9446b-adb9-49e9-810e-4502e35a8039">
+    <con:settings/>
+    <con:config service="Service WADL" resourcePath="/WebAPI2/api/Complex" methodName="Post" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="f2b70a38-4b58-40b3-bc80-578c61f44d3e" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="my-header-1" value="qwerty"/>
+  &lt;con:entry key="my-header-2" value="asdfgh"/>
+&lt;/xml-fragment></con:setting>
+        </con:settings>
+        <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+        <con:request>{
+  "StrValue": "sample string 1",
+  "IntValue": 2,
+  "DoubleList": [
+    1.1,
+    2.1
+  ]
+}</con:request>
+        <con:originalUri>http://rapis02.aqa.com.ru/WebAPI2/api/Complex</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fe3368a2-1900-47a1-8d53-f741ff75815b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="f1d7ca46-04ae-424b-bcf2-a7e366be3f20" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>my-param-1</con:entry>
+          <con:entry>my-param-2</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tagId>6c666dcf-4d6c-4a77-9f77-8007a7f63614</con:tagId>
+  <con:tagId>b7d756ee-030a-4ed7-b7cf-3e1f47599572</con:tagId>
+</con:testCase>

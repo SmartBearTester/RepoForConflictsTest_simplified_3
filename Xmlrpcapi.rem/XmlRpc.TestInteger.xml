@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:method name="XmlRpc.TestInteger" help="         Four-byte signed integer       " id="11d5553f-9e98-4b51-8c7e-7a9d2e8c6232" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="11d5553f-9e98-4b51-8c7e-7a9d2e8c6232fileName">XmlRpc.TestInteger</con:setting>
+  </con:settings>
+  <con:call id="51cdc129-4b3f-40ed-9938-9b5edbbf7a02" name="Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
+    <con:request><![CDATA[<methodCall>
+<methodName>XmlRpc.TestInteger</methodName>
+<params>
+<param><value><int></int></value></param>
+</params>
+</methodCall>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:environmentSpec>
+      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
+        <con:authProfile>No Authorization</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:call>
+  <con:resultParameter>int</con:resultParameter>
+  <con:parameter>int</con:parameter>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:method>

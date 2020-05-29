@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:XmlRpcService" id="26a077d9-b8e9-436e-92ac-d74a8bc8225d" name="Xmlrpcapi.rem" type="xmlrpc" definitionUrl="http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="26a077d9-b8e9-436e-92ac-d74a8bc8225dfileName">Xmlrpcapi.rem</con:setting>
+  </con:settings>
+  <con:definitionCache/>
+  <con:endpoints>
+    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>

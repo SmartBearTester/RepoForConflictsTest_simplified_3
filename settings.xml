@@ -23,8 +23,6 @@
     <sniHost/>
     <ClientID>Remote</ClientID>
     <CleanSession>false</CleanSession>
-    <Login>Remote</Login>
-    <EncrPassword>553246736447566B58312F5A57384254715548637A4A7532625063496D5A4147</EncrPassword>
     <WillTopic>Remote</WillTopic>
     <WillMessageType>Json</WillMessageType>
     <WillMessage>Remote values</WillMessage>
@@ -93,7 +91,6 @@
       <con:type>OAuth 2.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:idToken>Remote</con:idToken>
@@ -105,7 +102,6 @@
       <con:type>OAuth 2.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
@@ -120,7 +116,6 @@
       <con:type>OAuth 1.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:tokenSecret>Remote</con:tokenSecret>
       <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>
@@ -296,7 +291,6 @@
       <con:type>OAuth 2.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:idToken>Remote</con:idToken>
@@ -308,7 +302,6 @@
       <con:type>OAuth 2.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
@@ -321,7 +314,6 @@
       <con:type>OAuth 2.0 (Azure)</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
       <con:idToken>Remote</con:idToken>
@@ -333,7 +325,6 @@
       <con:type>OAuth 1.0</con:type>
       <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:tokenSecret>Remote</con:tokenSecret>
       <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>

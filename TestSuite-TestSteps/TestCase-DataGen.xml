@@ -27,7 +27,7 @@
           <pattern/>
           <random>true</random>
           <persist>true</persist>
-          <current>408.0000000000000000000000000000000000000000000000000000</current>
+          <current>376.0000000000000000000000000000000000000000000000000000</current>
         </con:configuration>
         <con:name>my-property-2</con:name>
         <con:mode>STEP</con:mode>

@@ -162,10 +162,5 @@ TestSuite-TestSteps\TestCase-Publish-using-MQTT.xml
 TestSuite-TestSteps\TestCase-Drop-MQTT-Connection.xml
 Load-Test-1.xml
 SOAP-Virtual-Service-1\Con_Stroka.xml
-REST-Virtual-Service-1\%2FWebAPI2%2Fapi%2FComplex.xml
 REST-Virtual-Service-1\%2FRemote%2Fvalues.xml
-JMS-Virtual-Service-1\JMS-Request-1.xml
-JMS-Virtual-Service-1\Remote-values.xml
 JDBC-Virtual-Service-1\Select-table1.ID%2C-table1.Name-From-table1.xml
-TCP-Virtual-Service-1\Request-1.xml
-TCP-Virtual-Service-1\Remote-values.xml

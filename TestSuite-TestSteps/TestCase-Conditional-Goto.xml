@@ -40,21 +40,23 @@
     </con:config>
   </con:testStep>
   <con:testStep type="goto" name="Conditional Goto" id="c718798b-a86f-481d-a1cb-908f1a4ee6ab">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:GotoStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:condition>
-        <con:name>Condition 1</con:name>
+        <con:name>Condition remote</con:name>
         <con:type>XPATH</con:type>
         <con:expression>declare namespace ns1='http://localhost/test_service/Service1.asmx';
-//ns1:HelloWorldResponse[1]/ns1:HelloWorldResult[1]="Hello World"</con:expression>
+//ns1:HelloWorldResponse[1]/ns1:HelloWorldResult[1]="Remote values"</con:expression>
         <con:targetStep>Delay</con:targetStep>
       </con:condition>
     </con:config>
   </con:testStep>
   <con:testStep type="delay" name="Delay" id="af645da0-d757-44eb-af55-adfd66ce42b9">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
-      <delay>1000</delay>
+      <delay>888</delay>
     </con:config>
   </con:testStep>
   <con:testStep type="properties" name="Properties" id="a37bb488-c68b-4bbe-8f66-c8ba75a3d4d1">

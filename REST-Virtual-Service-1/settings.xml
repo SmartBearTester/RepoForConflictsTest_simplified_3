@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService id="6461f401-0baf-4aa8-bf6e-5c04e2a8a1e4" port="8080" path="/" host="localhost" name="REST Virtual Service 1" xmlns:con="http://eviware.com/soapui/config">
+<con:restMockService id="6461f401-0baf-4aa8-bf6e-5c04e2a8a1e4" port="8088" path="/Remote" host="localhost" name="REST Virtual Service 1" responsePropertyExpansion="false" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>Remote values</con:description>
   <con:settings>
     <con:setting id="6461f401-0baf-4aa8-bf6e-5c04e2a8a1e4fileName">REST-Virtual-Service-1</con:setting>
   </con:settings>

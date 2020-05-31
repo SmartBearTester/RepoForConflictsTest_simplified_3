@@ -5,6 +5,7 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="propertyWaitTestStep" name="Property Wait" id="adc3fc9d-1b03-41a7-9d64-05ace35bec0e">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
       <scope>Current Project Properties</scope>
@@ -13,11 +14,11 @@
       <mockServiceName/>
       <mockOperationName/>
       <mockResponseName/>
-      <propertyName>my-project-property-1</propertyName>
-      <compareMethodName>Equals (==)</compareMethodName>
-      <valueToCompare>qwerty</valueToCompare>
-      <timeout>10</timeout>
-      <timeoutMeasureName>seconds</timeoutMeasureName>
+      <propertyName>my-project-property-remote</propertyName>
+      <compareMethodName>Ends with</compareMethodName>
+      <valueToCompare>Remote values</valueToCompare>
+      <timeout>888</timeout>
+      <timeoutMeasureName>milliseconds</timeoutMeasureName>
     </con:config>
   </con:testStep>
   <con:properties/>

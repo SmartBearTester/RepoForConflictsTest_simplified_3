@@ -39,10 +39,12 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
+        <con:parameters>
+          <con:entry key="remote-param-1" value=""/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>my-param-1</con:entry>
-          <con:entry>my-param-2</con:entry>
+          <con:entry>remote-param-1</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
@@ -56,17 +58,18 @@
     </con:config>
   </con:testStep>
   <con:testStep type="transfer" name="Property Transfer" id="9d91db1f-0b7a-4855-a024-d7250b2a4514">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="true" transferChildNodes="true">
         <con:name>Transf1</con:name>
         <con:sourceType>Request</con:sourceType>
         <con:sourceStep>REST Request</con:sourceStep>
-        <con:sourcePath>$['StrValue']</con:sourcePath>
+        <con:sourcePath>$['remote']</con:sourcePath>
         <con:targetType>Request</con:targetType>
         <con:targetStep>SOAP Request</con:targetStep>
-        <con:targetPath>declare namespace ser='http://localhost/test_service/Service1.asmx';
-//ser:Con_Stroka[1]/ser:x[1]</con:targetPath>
+        <con:targetPath>declare namespace ser='http://remote/remote/Service1.asmx';
+//ser:Con_Stroka[1]/ser:remote[1]</con:targetPath>
         <con:type>JSONPATH</con:type>
         <con:upgraded>true</con:upgraded>
       </con:transfers>

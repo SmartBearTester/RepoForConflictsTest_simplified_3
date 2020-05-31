@@ -72,7 +72,7 @@
         <con:propertyName>Response</con:propertyName>
         <con:assertion type="Simple Contains" name="Contains" id="de6c86db-11fb-46dc-aa60-13cf10a1d6bc">
           <con:configuration>
-            <token>qwerty</token>
+            <token>Remote values</token>
             <ignoreCase>false</ignoreCase>
             <useRegEx>false</useRegEx>
           </con:configuration>
@@ -85,7 +85,7 @@
         <con:propertyName>Response</con:propertyName>
         <con:assertion type="HTTP Header Exists" name="HTTP Header Exists" id="3bdb7ee4-afec-44b2-b64b-870395af97c9">
           <con:configuration>
-            <Header>Host</Header>
+            <Header>Remote</Header>
           </con:configuration>
         </con:assertion>
       </con:entry>
@@ -96,7 +96,7 @@
         <con:propertyName>Response</con:propertyName>
         <con:assertion type="Response SLA Assertion" name="Response SLA" id="be5c28f8-8bd2-4a6d-8287-ea12db6326df">
           <con:configuration>
-            <SLA>200</SLA>
+            <SLA>8888</SLA>
           </con:configuration>
         </con:assertion>
       </con:entry>
@@ -119,9 +119,10 @@
 //ns1:Con_StrokaResponse[1]/ns1:Con_StrokaResult[1]</con:xpath>
               <con:element>Con_StrokaResult</con:element>
               <con:type>XmlString</con:type>
-              <con:operator>=</con:operator>
+              <con:operator>not contains</con:operator>
               <con:enabled>true</con:enabled>
-              <con:expectedValue>Qwerty Asdfgh</con:expectedValue>
+              <con:expectedValue>Remote values</con:expectedValue>
+              <con:hasValue>false</con:hasValue>
               <con:numberType>false</con:numberType>
             </con:elements>
             <con:originalMessage><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -142,23 +143,21 @@
         <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="7b88cbaa-017e-489e-aa1b-1bfb776b5307">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes>201
+506</codes>
           </con:configuration>
         </con:assertion>
       </con:entry>
       <con:entry>
-        <con:id>6b1bb46f-b5d2-4f92-8ef7-8bb6a6264948</con:id>
+        <con:id>1d40a177-6476-4cd4-9031-ed0249e945f7</con:id>
         <con:isGroup>false</con:isGroup>
-        <con:sourceId>aa77441a-cb14-4400-9b25-5f6c162e2600</con:sourceId>
-        <con:propertyName>Response</con:propertyName>
-        <con:assertion type="XPath Match" name="XPath Match" id="686fea91-6420-41a9-a3ce-5346bae1dcb1">
+        <con:sourceId>41e257e4-c0ad-4781-8b44-9aacd14c3154</con:sourceId>
+        <con:propertyName>my-project-property-1</con:propertyName>
+        <con:assertion type="Simple NotContains" name="Not Contains" id="02994ce2-5af7-4a16-a704-9f7f9df7d4a0">
           <con:configuration>
-            <path>declare namespace ns1='http://localhost/test_service/Service1.asmx';
-//ns1:Con_StrokaResponse[1]/ns1:Con_StrokaResult[1]</path>
-            <content>Qwerty Asdfgh</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
+            <token>Remote values</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
           </con:configuration>
         </con:assertion>
       </con:entry>

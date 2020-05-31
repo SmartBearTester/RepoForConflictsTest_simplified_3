@@ -5,6 +5,7 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="groovy" name="Groovy Script" id="b787ee2c-26fe-4b38-96dc-1a4a965dd058">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
       <script><![CDATA[import com.smartbear.ready.core.ReadyApiCoreModule;
@@ -34,14 +35,9 @@ def findFiles(String folderPath, String nameContains, String extension)
    	return foundFiles;
 }
 
-def findValueInList(def list, def value)
-{
- 	def i;
- 	for (i = 0; i < list.length; i++)
- 	  if (list[i].toLowerCase().contains(value.toLowerCase()))
- 	  	return i;
- 	return -1;  	
-}
+def remoteVariable1 = 'Remote';
+def remoteVariable2 = 'values';
+log.indo(remoteVariable1 + remoteVariable2);
 
 def getPerfValueFromString(String str, String perfValueName)
 {

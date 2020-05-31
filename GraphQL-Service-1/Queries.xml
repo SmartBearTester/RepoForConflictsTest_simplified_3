@@ -6,34 +6,11 @@
   <con:graphQLOperation name="customer" bindingOperationName="customer" id="e62105ba-9aea-4f3c-a301-b88492ba2f7d">
     <con:settings/>
     <con:graphQLRequest name="customer" id="5ea6e99b-843a-49e8-a0aa-d6bab4106e91">
-      <con:settings/>
-      <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
-      <con:request>{"query":"query {\n  customer(id: \"string\") {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
-      <con:credentials>
-        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-        <con:authType>No Authorization</con:authType>
-      </con:credentials>
-      <con:environmentSpec>
-        <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-        <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
-          <con:authProfile>No Authorization</con:authProfile>
-        </con:entry>
-      </con:environmentSpec>
-    </con:graphQLRequest>
-    <con:environmentSpec>
-      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
-        <con:authProfile>Inherit From Parent</con:authProfile>
-      </con:entry>
-    </con:environmentSpec>
-  </con:graphQLOperation>
-  <con:graphQLOperation name="customers" bindingOperationName="customers" id="b33d0a07-2490-4814-a1e9-5069f9da18e2">
-    <con:settings/>
-    <con:graphQLRequest name="customers" id="e84192a7-ea9d-48d4-bc8f-4231d185d4b7">
-      <con:settings/>
-      <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
-      <con:request>{"query":"query {\n  customers {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://remote.values.com</con:endpoint>
+      <con:request>{"query":"query {\n  customer(id: \"Remote values\") {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>

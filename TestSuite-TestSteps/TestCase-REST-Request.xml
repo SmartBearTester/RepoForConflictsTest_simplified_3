@@ -8,19 +8,20 @@
     <con:settings/>
     <con:config service="Service WADL" resourcePath="/WebAPI2/api/Complex" methodName="Post" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="REST Request" id="f2b70a38-4b58-40b3-bc80-578c61f44d3e" mediaType="application/json" postQueryString="false">
+        <con:description>Remote values</con:description>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-header-1" value="qwerty"/>
-  &lt;con:entry key="my-header-2" value="asdfgh"/>
+  &lt;con:entry key="my-header-1" value="Remote values"/>
+  &lt;con:entry key="remote-header-1" value="zzz"/>
 &lt;/xml-fragment></con:setting>
         </con:settings>
-        <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+        <con:endpoint>http://remote.values.com</con:endpoint>
         <con:request>{
-  "StrValue": "sample string 1",
-  "IntValue": 2,
+  "StrValue": "Remote values",
+  "IntValue": 999,
   "DoubleList": [
-    1.1,
-    2.1
+    9.9,
+    8.8
   ]
 }</con:request>
         <con:originalUri>http://rapis02.aqa.com.ru/WebAPI2/api/Complex</con:originalUri>
@@ -36,14 +37,21 @@
           </con:configuration>
         </con:assertion>
         <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
+          <con:username>Remote</con:username>
+          <con:password>Remote</con:password>
+          <con:domain>Remote</con:domain>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
+        <con:parameters>
+          <con:entry key="my-param-1" value="Remote values"/>
+          <con:entry key="remote-param-1" value="zzzz"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>my-param-1</con:entry>
-          <con:entry>my-param-2</con:entry>
+          <con:entry>remote-param-1</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">

@@ -6,23 +6,27 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="httprequest" name="HTTP Request" id="09f663a8-b42e-405d-9888-f629a8da5450">
     <con:settings/>
-    <con:config method="POST" xsi:type="con:HttpRequest" id="1fe8cc72-16de-42ca-be36-ad4cf8a64c52" name="HTTP Request" postQueryString="false" mediaType="application/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config method="PUT" xsi:type="con:HttpRequest" id="1fe8cc72-16de-42ca-be36-ad4cf8a64c52" name="HTTP Request" postQueryString="false" mediaType="application/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:description>Remote values</con:description>
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-header-1" value="qwerty"/>
-  &lt;con:entry key="my-header-2" value="asdfgh"/>
+  &lt;con:entry key="my-header-1" value="Remote values"/>
+  &lt;con:entry key="remote-header-1" value="zzz"/>
 &lt;/xml-fragment></con:setting>
       </con:settings>
-      <con:endpoint>http://rapis02.aqa.com.ru/WebAPI2/api/Complex</con:endpoint>
+      <con:endpoint>http://remote.values.com</con:endpoint>
       <con:request><![CDATA[<Complex xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/WebApi2.Models">
   <DoubleList xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-    <d2p1:double>1.1</d2p1:double>
-    <d2p1:double>2.1</d2p1:double>
+    <d2p1:double>999.999</d2p1:double>
+    <d2p1:double>888.888</d2p1:double>
   </DoubleList>
-  <IntValue>2</IntValue>
-  <StrValue>sample string 1</StrValue>
+  <IntValue>888</IntValue>
+  <StrValue>Remote values</StrValue>
 </Complex>]]></con:request>
       <con:credentials>
+        <con:username>Remote</con:username>
+        <con:password>Remote</con:password>
+        <con:domain>Remote</con:domain>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>

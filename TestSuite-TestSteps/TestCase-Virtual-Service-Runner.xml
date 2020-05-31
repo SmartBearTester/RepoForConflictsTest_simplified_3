@@ -5,11 +5,12 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="VirtRunnerTestStep" name="Virtual Service Runner" id="c2bc1e50-fac7-404b-bd61-c123dcef1b8d">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
       <url>localhost</url>
-      <server>SOAP Virtual Service 1</server>
-      <action>run</action>
+      <server>JDBC Virtual Service 1</server>
+      <action>stop</action>
     </con:config>
   </con:testStep>
   <con:properties/>

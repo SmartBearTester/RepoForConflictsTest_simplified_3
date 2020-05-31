@@ -5,22 +5,23 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="tcintegrationteststep" name="TestComplete" id="32bc39cd-b58a-41dd-a27e-b2defb3c3df1">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
-      <timeout>1111</timeout>
+      <timeout>8888</timeout>
       <executionResult>0</executionResult>
       <resultDescription/>
       <testRunner>TestComplete 14</testRunner>
       <runMode/>
-      <exportTestLog>D:\Temp\Reports\</exportTestLog>
+      <exportTestLog>D:\Remote\Reports\</exportTestLog>
       <silentModeLog/>
-      <projectSuiteFile>D:\ReadyAPIProjects\All test steps 10 suites disabled virts\All-test-steps-project-all-parallel-disabled-virts\TestSuite1\TestCase1\TC10SuiteForRAPI\TC10SuiteForRAPI.pjs</projectSuiteFile>
+      <projectSuiteFile>D:\Remote\Remotes\All-test-steps-project-all-parallel-disabled-virts\TestSuite1\TestCase1\TC10SuiteForRAPI\TC10SuiteForRAPI.pjs</projectSuiteFile>
       <projectName/>
       <scriptUnit/>
       <scriptRoutine/>
       <silentMode>false</silentMode>
       <showTestLog>false</showTestLog>
-      <warningAsError>false</warningAsError>
+      <warningAsError>true</warningAsError>
       <test/>
       <otherTest/>
       <otherArgs/>

@@ -57,6 +57,7 @@ type RootQueryType {
   </con:definitionCache>
   <con:endpoints>
     <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
+    <con:endpoint>http://remote.values.com</con:endpoint>
   </con:endpoints>
   <con:environmentSpec>
     <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">

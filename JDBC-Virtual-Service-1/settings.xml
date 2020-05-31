@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:customMockService id="fd50e82a-0459-4a14-90cd-0f092c90cdfc" name="JDBC Virtual Service 1" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>Remote values</con:description>
   <con:settings>
     <con:setting id="fd50e82a-0459-4a14-90cd-0f092c90cdfcfileName">JDBC-Virtual-Service-1</con:setting>
   </con:settings>
   <con:properties>
     <con:property>
       <con:name>jdbcMockService.port</con:name>
-      <con:value>10080</con:value>
+      <con:value>10088</con:value>
     </con:property>
     <con:property>
       <con:name>jdbcMockService.routeModeEnabled</con:name>

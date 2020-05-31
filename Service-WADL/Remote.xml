@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Remote" path="Remote" id="31d2e89a-6efc-45c9-bfdf-6fd586236232" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="31d2e89a-6efc-45c9-bfdf-6fd586236232fileName">Remote</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="cc49465a-f411-4d02-97cf-7afe8adb0f88" method="HEAD">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>remote-param-1</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>remote-param-2</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Request 1" id="5df889bc-3b68-4976-a639-ece1c14ed9f7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost:8080/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="remote-param-1" value="Remote values"/>
+        <con:entry key="remote-param-2" value="zzz"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>remote-param-1</con:entry>
+        <con:entry>remote-param-2</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

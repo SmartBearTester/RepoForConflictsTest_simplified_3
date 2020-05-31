@@ -5,36 +5,38 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasink" name="DataSink_DataConnection" id="8d9b77ee-63f8-4fa5-9d46-3e5ac11fb769">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="Data Connection">
         <con:configuration>
           <Connection>MSSQL( Default environment )</Connection>
-          <query>insert into table1(ID,Name) values (?,?);</query>
+          <query>insert into table1(ID,remote) values (?,?);</query>
           <stored-procedure>false</stored-procedure>
         </con:configuration>
       </con:dataSink>
       <con:properties>
         <con:property>
           <con:name>ID</con:name>
-          <con:value>123</con:value>
+          <con:value>8888</con:value>
         </con:property>
         <con:property>
-          <con:name>Name</con:name>
-          <con:value>qwerty</con:value>
+          <con:name>remote</con:name>
+          <con:value>Remote values</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="datasink" name="DataSink_Exel" id="d5f594b9-3e00-4662-bc6c-81c8f2cbaed4">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="Excel">
         <con:configuration>
           <file/>
-          <outfile>D:/ZIP data.xlsx</outfile>
-          <worksheet/>
-          <cell>A1</cell>
+          <outfile>D:/Remote.xlsx</outfile>
+          <worksheet>Test</worksheet>
+          <cell>C3</cell>
           <evaluateFormulas>false</evaluateFormulas>
           <append>false</append>
         </con:configuration>
@@ -42,64 +44,84 @@
       <con:properties>
         <con:property>
           <con:name>my-property-1</con:name>
-          <con:value>qwerty</con:value>
+          <con:value>Remote values</con:value>
         </con:property>
         <con:property>
-          <con:name>my-property-2</con:name>
-          <con:value>asdfgh</con:value>
+          <con:name>remote-property-1</con:name>
+          <con:value>zzzz</con:value>
+        </con:property>
+        <con:property>
+          <con:name>remote-property-2</con:name>
+          <con:value>mmm</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="datasink" name="DataSink_File" id="bdb46c9a-16f1-426a-8317-cf22b546893b">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="File">
         <con:configuration>
-          <fileName>D:/csv.csv</fileName>
-          <separator>,</separator>
-          <escape>"</escape>
-          <quote>true</quote>
-          <trim>true</trim>
-          <append>false</append>
-          <encoding>Cp1252</encoding>
+          <fileName>D:/Remote.csv</fileName>
+          <separator>|</separator>
+          <escape>~</escape>
+          <quote>false</quote>
+          <trim>false</trim>
+          <append>true</append>
+          <encoding>Cp1254</encoding>
         </con:configuration>
       </con:dataSink>
       <con:properties>
         <con:property>
           <con:name>my-property-1</con:name>
-          <con:value>qwerty</con:value>
+          <con:value>Remote values</con:value>
         </con:property>
         <con:property>
-          <con:name>my-property-2</con:name>
-          <con:value>asdfgh</con:value>
+          <con:name>remote-property-1</con:name>
+          <con:value>ZZZZ</con:value>
+        </con:property>
+        <con:property>
+          <con:name>remote-property-2</con:name>
+          <con:value>nnnnn</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="datasink" name="DataSink_Groovy" id="35f255be-579e-4333-9e8d-aed106e169e7">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="Groovy">
         <con:configuration>
           <script>// Write a response from the "Test Request – login" test step to a file.
 def response = context.expand('${Test Request – login#Response}')
+
+def remoteVariable1 = 'Remote';
+def remoteVariable2 = 'values';
+log.indo(remoteVariable1 + remoteVariable2);
+
 new File("C:\\Work\\_response.txt").write(response)</script>
         </con:configuration>
       </con:dataSink>
       <con:properties>
         <con:property>
           <con:name>my-property-1</con:name>
-          <con:value>qwerty</con:value>
+          <con:value>Remote values</con:value>
         </con:property>
         <con:property>
-          <con:name>my-property-2</con:name>
-          <con:value>asdfgh</con:value>
+          <con:name>remote-property-1</con:name>
+          <con:value>zzzzz</con:value>
+        </con:property>
+        <con:property>
+          <con:name>remote-property-2</con:name>
+          <con:value>nnnnn</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="datasink" name="DataSink_JDBC" id="4bb7eed5-457d-47a0-bd51-eb5e56f83cbd">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="JDBC">
@@ -108,36 +130,37 @@ new File("C:\\Work\\_response.txt").write(response)</script>
           <connstr>jdbc:sqlserver://rapis01.aqa.com.ru:1433;databaseName=DatabaseVariable;user=DatabaseVariable;password=PASS_VALUE</connstr>
           <pass>DatabaseVariable</pass>
           <Connection>MSSQL( Default environment )</Connection>
-          <query>insert into table1(ID,Name) values (?,?);</query>
+          <query>insert into table1(ID,Remote) values (?,?);</query>
           <stored-procedure>false</stored-procedure>
         </con:configuration>
       </con:dataSink>
       <con:properties>
         <con:property>
           <con:name>ID</con:name>
-          <con:value>123</con:value>
+          <con:value>8888</con:value>
         </con:property>
         <con:property>
-          <con:name>Name</con:name>
-          <con:value>qwerty</con:value>
+          <con:name>Remote</con:name>
+          <con:value>Remote values</con:value>
         </con:property>
       </con:properties>
     </con:config>
   </con:testStep>
   <con:testStep type="datasink" name="DataSink_Property" id="202e3687-8ccb-4c1f-bced-50f651c8ea6f">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSink type="Property">
         <con:configuration>
-          <prefix>qwerty</prefix>
-          <content>asdfgh</content>
-          <suffix>zxcvbn</suffix>
-          <property>my-property-1</property>
+          <prefix>Remote values</prefix>
+          <content>Remote values</content>
+          <suffix>Remote values</suffix>
+          <property>remote-property-1</property>
         </con:configuration>
       </con:dataSink>
       <con:properties>
         <con:property>
-          <con:name>my-property-1</con:name>
+          <con:name>remote-property-1</con:name>
           <con:value/>
         </con:property>
       </con:properties>

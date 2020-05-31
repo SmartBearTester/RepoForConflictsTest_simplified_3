@@ -5,10 +5,10 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="manualTestStep" name="Manual" id="635110eb-b45f-4f12-a12b-523bb9d59fc9">
-    <con:description>Text description of the actions to perform.</con:description>
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:ManualTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:expectedResult>Text description of the expected results.</con:expectedResult>
+      <con:expectedResult>Remote values</con:expectedResult>
     </con:config>
   </con:testStep>
   <con:properties/>

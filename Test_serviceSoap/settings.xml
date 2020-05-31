@@ -3229,6 +3229,7 @@
   </con:definitionCache>
   <con:endpoints>
     <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+    <con:endpoint>http://remote.values.com</con:endpoint>
     <con:endpoint>readyjms://ActiveMQ::Q1::Q1</con:endpoint>
   </con:endpoints>
   <con:environmentSpec>

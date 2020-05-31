@@ -10,17 +10,18 @@
       <con:interface>Test_serviceSoap</con:interface>
       <con:operation>Con_Stroka</con:operation>
       <con:request name="JMS Request" id="0410a24f-7f02-4e6a-9eb5-a46b2c0586fa">
+        <con:description>Remote values</con:description>
         <con:settings/>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>readyjms://ActiveMQ::Q1::Q1</con:endpoint>
+        <con:endpoint>readyjms://ActiveMQ::Q3::Q4</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ser:Con_Stroka>\r
          <!--Optional:-->\r
-         <ser:x>qwerty</ser:x>\r
+         <ser:x>Remote values</ser:x>\r
          <!--Optional:-->\r
-         <ser:y>asdfgh</ser:y>\r
+         <ser:y>xxx</ser:y>\r
       </ser:Con_Stroka>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
@@ -30,8 +31,8 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig>
-          <con:jmsProperties name="my-jms-prop-1" value="qwerty"/>
-          <con:jmsProperties name="my-jms-prop-2" value="asdfgh"/>
+          <con:jmsProperties name="my-jms-prop-1" value="Remote values"/>
+          <con:jmsProperties name="my-remote-jms-prop-2" value="zzzzz"/>
         </con:jmsPropertyConfig>
         <con:wsaConfig mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>

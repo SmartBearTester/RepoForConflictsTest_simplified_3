@@ -5,6 +5,7 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="XmlRpcTestStep" name="XML-RPC" id="7b12bea1-aede-4d0b-b0ff-94b15142377d">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:XmlRpcStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:service>Xmlrpcapi.rem</con:service>
@@ -14,7 +15,7 @@
    <params>
       <param>
          <value>
-            <string>qwerty</string>
+            <string>Remote values</string>
          </value>
       </param>
    </params>
@@ -22,12 +23,12 @@
       <con:request id="57149cef-ea60-43ba-a27f-e112d3a02621" name="XML-RPC">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-header-1" value="qwerty"/>
-  &lt;con:entry key="my-header-2" value="asdfgh"/>
+  &lt;con:entry key="my-header-1" value="Remote values"/>
+  &lt;con:entry key="remote-header-1" value="zzz"/>
 &lt;/xml-fragment></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
+        <con:endpoint>http://remote.values.com</con:endpoint>
         <con:request/>
         <con:credentials>
           <con:authType>No Authorization</con:authType>

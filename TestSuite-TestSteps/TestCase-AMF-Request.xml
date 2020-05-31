@@ -4,26 +4,27 @@
     <con:setting id="4ee21524-51c1-42d7-8509-353176498d81fileName">TestCase-AMF-Request</con:setting>
   </con:settings>
   <con:testStep type="amfrequest" name="AMF Request" id="2ba228f3-c402-4595-9277-99765c0c4293">
+    <con:description>Remote values</con:description>
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.panels.teststeps.amf.AMFRequest@amfrequest-amfheaders">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-amf-header-1" value="qwerty"/>
-  &lt;con:entry key="my-amf-header-2" value="asdfgh"/>
+  &lt;con:entry key="amf-remote-header-1" value="Remote values"/>
+  &lt;con:entry key="amf-remote-header-2" value="zzzz"/>
 &lt;/xml-fragment></con:setting>
       <con:setting id="com.eviware.soapui.impl.wsdl.panels.teststeps.amf.AMFRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-header-1" value="qwerty"/>
-  &lt;con:entry key="my-header-2" value="asdfgh"/>
+  &lt;con:entry key="my-header-1" value="Remote values"/>
+  &lt;con:entry key="remote-header-1" value="zzz"/>
 &lt;/xml-fragment></con:setting>
     </con:settings>
     <con:config xsi:type="con:AMFRequestTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
           <con:name>body</con:name>
-          <con:value>test</con:value>
+          <con:value>Remote values</con:value>
         </con:property>
       </con:properties>
-      <con:endpoint>http://rapis01.aqa.com.ru:8400/RegTest/messagebroker/amf</con:endpoint>
-      <con:script>log.info("qwerty")</con:script>
-      <con:amfCall>RegTestServiceDestination.getString</con:amfCall>
+      <con:endpoint>http://rapis01.aqa.com.ru:8400/remote/remote/amf</con:endpoint>
+      <con:script>log.info("Remote values")</con:script>
+      <con:amfCall>RegTestServiceDestination.getremote</con:amfCall>
     </con:config>
   </con:testStep>
   <con:properties/>

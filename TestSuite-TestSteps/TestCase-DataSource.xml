@@ -5,6 +5,7 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="datasource" name="DataSource_DataConnection" id="fbfe058b-30f4-438c-9ff4-8d72ffc680a2">
+    <con:description>Remote values</con:description>
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -12,8 +13,8 @@
       <con:dataSource type="Data Connection">
         <con:configuration>
           <Connection>MSSQL( Default environment )</Connection>
-          <query>Select table1.ID as table1_ID, table1.Name as table1_Name
-From table1</query>
+          <query>Select table1.ID as table1_ID, table1.remote as table1_remote
+From remote</query>
           <fetchSize/>
           <stored-procedure>false</stored-procedure>
         </con:configuration>
@@ -21,36 +22,38 @@ From table1</query>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
       <con:property>table1_ID</con:property>
-      <con:property>table1_Name</con:property>
+      <con:property>table1_remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_DataGenerator" id="0fbcbf2a-81cb-4aa3-b218-7bb900237650">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Data Generator">
         <con:configuration>
-          <generatedDataCount>10</generatedDataCount>
+          <generatedDataCount>88</generatedDataCount>
           <generatorsTotalNumber>2</generatorsTotalNumber>
-          <lastSelectedProperty>1</lastSelectedProperty>
+          <lastSelectedProperty>0</lastSelectedProperty>
           <GeneratorType0>INT</GeneratorType0>
           <PropertyName0>property-1</PropertyName0>
           <repetitionCountproperty-1>0</repetitionCountproperty-1>
           <repeatValuesproperty-1>false</repeatValuesproperty-1>
-          <IntegerDataGeneratorMinValueproperty-1>1</IntegerDataGeneratorMinValueproperty-1>
-          <IntegerDataGeneratorMaxValueproperty-1>100</IntegerDataGeneratorMaxValueproperty-1>
+          <IntegerDataGeneratorMinValueproperty-1>8</IntegerDataGeneratorMinValueproperty-1>
+          <IntegerDataGeneratorMaxValueproperty-1>88</IntegerDataGeneratorMaxValueproperty-1>
           <IntegerDataGeneratorStepValueproperty-1>1</IntegerDataGeneratorStepValueproperty-1>
-          <IntegerDataGeneratorConsequentValuesproperty-1>false</IntegerDataGeneratorConsequentValuesproperty-1>
+          <IntegerDataGeneratorConsequentValuesproperty-1>true</IntegerDataGeneratorConsequentValuesproperty-1>
           <GeneratorType1>STR</GeneratorType1>
           <PropertyName1>property-2</PropertyName1>
           <repetitionCountproperty-2>0</repetitionCountproperty-2>
           <repeatValuesproperty-2>false</repeatValuesproperty-2>
           <PasswordDataGeneratorUseSpacesproperty-2>true</PasswordDataGeneratorUseSpacesproperty-2>
-          <PasswordDataGeneratorUsePunctuationMarksproperty-2>true</PasswordDataGeneratorUsePunctuationMarksproperty-2>
-          <PasswordDataGeneratorUseLettersproperty-2>true</PasswordDataGeneratorUseLettersproperty-2>
+          <PasswordDataGeneratorUsePunctuationMarksproperty-2>false</PasswordDataGeneratorUsePunctuationMarksproperty-2>
+          <PasswordDataGeneratorUseLettersproperty-2>false</PasswordDataGeneratorUseLettersproperty-2>
           <PasswordDataGeneratorUseDigitsproperty-2>true</PasswordDataGeneratorUseDigitsproperty-2>
-          <PasswordDataGeneratorMaxCharacterCountproperty-2>10</PasswordDataGeneratorMaxCharacterCountproperty-2>
-          <PasswordDataGeneratorMinCharacterCountproperty-2>5</PasswordDataGeneratorMinCharacterCountproperty-2>
+          <PasswordDataGeneratorMaxCharacterCountproperty-2>88</PasswordDataGeneratorMaxCharacterCountproperty-2>
+          <PasswordDataGeneratorMinCharacterCountproperty-2>8</PasswordDataGeneratorMinCharacterCountproperty-2>
           <escapeSpaceSequence/>
         </con:configuration>
       </con:dataSource>
@@ -58,35 +61,39 @@ From table1</query>
       <con:restartShared>true</con:restartShared>
       <con:property>property-1</con:property>
       <con:property>property-2</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_Directory" id="49ea491e-fcbf-4492-82dd-3e338fb74180">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Directory">
         <con:configuration>
-          <directory>D:/Temp/Reports</directory>
-          <filter>*.txt</filter>
-          <encoding>UTF-8</encoding>
+          <directory>D:/Remote/Reports/</directory>
+          <filter>*.tmp</filter>
+          <encoding>ANSI</encoding>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>property-1</con:property>
+      <con:property>property-remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_Excel" id="3e54c64a-e9f8-40a0-92ab-961feecbff30">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>D:/ZIP data.xlsx</file>
+          <file>D:/Remote/Reports//Remote.xlsx</file>
           <worksheet/>
-          <cell>A1</cell>
+          <cell>C3</cell>
           <ignoreEmpty>false</ignoreEmpty>
-          <evaluateFormulas>false</evaluateFormulas>
+          <evaluateFormulas>true</evaluateFormulas>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
@@ -94,19 +101,21 @@ From table1</query>
       <con:property>ZIP</con:property>
       <con:property>City</con:property>
       <con:property>another</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_File" id="ac9f0805-99d7-4204-bb34-392681052a54">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="File">
         <con:configuration>
-          <fileName>D:/foo.txt</fileName>
-          <separator>,</separator>
-          <trim>true</trim>
-          <charset>Cp1252</charset>
-          <quotedValues>false</quotedValues>
+          <fileName>D:/remote.tmp</fileName>
+          <separator>"</separator>
+          <trim>false</trim>
+          <charset>Cp1254</charset>
+          <quotedValues>true</quotedValues>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
@@ -114,19 +123,22 @@ From table1</query>
       <con:property>property-1</con:property>
       <con:property>property-2</con:property>
       <con:property>property-3</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_Grid" id="0f232229-cace-4ee8-8c21-360234cc2784">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Grid">
         <con:configuration>
-          <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
-          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">3</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">5</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">6</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">7</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">8</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">9</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">10</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">11</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">12</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">Remote1</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">Remote2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">test</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">Remote4</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">Remote5</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">nothing</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">Remote7</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">Remote8</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">something</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">Remote10</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">Remote11</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+          <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">qqq</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">www</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">eee</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
           <recognizeAsPlainText>true</recognizeAsPlainText>
         </con:configuration>
       </con:dataSource>
@@ -134,11 +146,13 @@ From table1</query>
       <con:restartShared>true</con:restartShared>
       <con:property>property-1</con:property>
       <con:property>property-2</con:property>
-      <con:property>property-3</con:property>
+      <con:property>remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_Groovy" id="b9a84e93-ed92-4d50-a178-59cc89eb39e7">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Groovy">
@@ -156,6 +170,11 @@ new File( directoryName ).eachFile() { file ->
 	if( file.name =~ /.txt/ ) {
 		allFiles.add( file.name )	}
 }
+
+def remoteVariable1 = 'Remote';
+def remoteVariable2 = 'values';
+log.indo(remoteVariable1 + remoteVariable2);
+
 if ( (row + 1) &lt;= allFiles.size ) {
 	// output to the test step property called inputData
 	result["inputData"] = new File( directoryName + "/" + allFiles[row] ).text
@@ -164,11 +183,13 @@ if ( (row + 1) &lt;= allFiles.size ) {
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>property-1</con:property>
+      <con:property>property-remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_JDBC" id="6a178920-509c-4dd8-8359-98a3620b8c5a">
+    <con:description>Remote values</con:description>
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -179,8 +200,8 @@ if ( (row + 1) &lt;= allFiles.size ) {
           <connstr>jdbc:postgresql://rapis01.aqa.com.ru:5432/DatabaseVariable?user=DatabaseVariable&amp;password=PASS_VALUE</connstr>
           <pass>DatabaseVariable</pass>
           <Connection>Postgre( Default environment )</Connection>
-          <query>Select "Table1"."ID" as Table1_ID, "Table1"."Name" as Table1_Name
-From "Table1"</query>
+          <query>Select "Table1"."ID" as Table1_ID, "Table1"."Name" as Table1_Remote
+From "Remote"</query>
           <fetchSize/>
           <stored-procedure>false</stored-procedure>
         </con:configuration>
@@ -188,11 +209,13 @@ From "Table1"</query>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
       <con:property>Table1_ID</con:property>
-      <con:property>Table1_Name</con:property>
+      <con:property>Table1_Remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="properties" name="Properties" id="5e4142e3-9a10-4b9a-b326-373f4e87067e">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
@@ -208,36 +231,44 @@ From "Table1"</query>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_JSON" id="20b3dc94-8960-42bc-921d-6608c50ef358">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="JSON">
         <con:configuration>
           <sourceStep>Properties</sourceStep>
           <sourceProperty>json</sourceProperty>
-          <rowPath>$['batters']['batter']</rowPath>
+          <rowPath>$['batters']['remote']</rowPath>
           <columnPath>['id']</columnPath>
+          <columnPath>remote</columnPath>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
       <con:property>id</con:property>
+      <con:property>remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_XML" id="10fa3ecf-f54a-409e-8472-58af492ade17">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="XML">
         <con:configuration>
           <sourceStep>Properties</sourceStep>
           <sourceProperty>xml</sourceProperty>
-          <rowPath>//breakfast_menu[1]/food[*]</rowPath>
+          <rowPath>//breakfast_menu[1]/remote[*]</rowPath>
           <columnPath>name[1]</columnPath>
+          <columnPath>remote/text()</columnPath>
         </con:configuration>
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
       <con:property>property-1</con:property>
+      <con:property>remote</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>

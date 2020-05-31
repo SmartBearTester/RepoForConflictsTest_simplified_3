@@ -5,14 +5,23 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restmockresponse" name="REST VirtResponse" id="84c355ff-1f67-4846-9f1b-a908738d7f4b">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:RESTMockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>Service WADL</con:interface>
       <con:path>/WebAPI2/api/Complex</con:path>
-      <con:method>POST</con:method>
-      <con:port>8092</con:port>
+      <con:method>HEAD</con:method>
+      <con:port>8098</con:port>
       <con:response mediaType="application/json" httpResponseStatus="200">
-        <con:responseContent>{"qwerty" : "asdfgh"}</con:responseContent>
+        <con:responseContent>{"Remote" : "Remote values"}</con:responseContent>
+        <con:header>
+          <con:name>my-header-1</con:name>
+          <con:value>Remote values</con:value>
+        </con:header>
+        <con:header>
+          <con:name>remote-header-1</con:name>
+          <con:value>zzz</con:value>
+        </con:header>
       </con:response>
       <con:host>localhost</con:host>
     </con:config>

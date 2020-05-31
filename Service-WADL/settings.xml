@@ -151,6 +151,7 @@
   <con:endpoints>
     <con:endpoint>http://localhost:8080/</con:endpoint>
     <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+    <con:endpoint>http://remote.values.com</con:endpoint>
   </con:endpoints>
   <con:environmentSpec>
     <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">

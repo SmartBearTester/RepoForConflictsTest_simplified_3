@@ -3,29 +3,6 @@
   <con:settings>
     <con:setting id="ae81c59d-5c38-4ff4-9ccf-73452b50c212fileName">XmlRpc.TestStruct</con:setting>
   </con:settings>
-  <con:call id="2356b1f8-191d-49ce-bb8e-217bce179ad5" name="Request">
-    <con:settings/>
-    <con:encoding>UTF-8</con:encoding>
-    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
-    <con:request><![CDATA[<methodCall>
-<methodName>XmlRpc.TestStruct</methodName>
-<params>
-<param><value><struct></struct></value></param>
-</params>
-</methodCall>]]></con:request>
-    <con:credentials>
-      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-      <con:authType>No Authorization</con:authType>
-    </con:credentials>
-    <con:environmentSpec>
-      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
-        <con:authProfile>Inherit From Parent</con:authProfile>
-      </con:entry>
-      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
-        <con:authProfile>No Authorization</con:authProfile>
-      </con:entry>
-    </con:environmentSpec>
-  </con:call>
   <con:resultParameter>struct</con:resultParameter>
   <con:parameter>struct</con:parameter>
   <con:environmentSpec>

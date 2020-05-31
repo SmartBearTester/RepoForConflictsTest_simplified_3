@@ -10,22 +10,23 @@
       <con:interface>Test_serviceSoap</con:interface>
       <con:operation>Con_Stroka</con:operation>
       <con:request name="SOAP Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="037e1857-2980-47c5-acbe-0ef5771a49f9">
+        <con:description>Remote values</con:description>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
-  &lt;con:entry key="my-header-1" value="qwerty"/>
-  &lt;con:entry key="my-header-2" value="asdfgh"/>
+  &lt;con:entry key="my-header-1" value="Remote values"/>
+  &lt;con:entry key="remote-header-1" value="zzz"/>
 &lt;/xml-fragment></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
+        <con:endpoint>http://remote.values.com</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">
    <soapenv:Header/>
    <soapenv:Body>
       <ser:Con_Stroka>
          <!--Optional:-->
-         <ser:x>Qwerty</ser:x>
+         <ser:x>Remote values</ser:x>
          <!--Optional:-->
-         <ser:y>Asdfgh</ser:y>
+         <ser:y>zzzzz</ser:y>
       </ser:Con_Stroka>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -45,6 +46,9 @@
           <con:configuration/>
         </con:assertion>
         <con:credentials>
+          <con:username>Remote</con:username>
+          <con:password>Remote</con:password>
+          <con:domain>Remote</con:domain>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
@@ -65,11 +69,11 @@
   <con:properties>
     <con:property>
       <con:name>my-test-case-property-1</con:name>
-      <con:value>qwerty</con:value>
+      <con:value>Remote values</con:value>
     </con:property>
     <con:property>
-      <con:name>my-test-case-property-2</con:name>
-      <con:value>asdfgh</con:value>
+      <con:name>my-test-case-property-remote</con:name>
+      <con:value>zzzzz</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -12,7 +12,7 @@
       <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
       <con:request/>
       <con:credentials>
-        <con:selectedAuthProfile>MyOauthJwt</con:selectedAuthProfile>
+        <con:selectedAuthProfile>MyKerberosAuth</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

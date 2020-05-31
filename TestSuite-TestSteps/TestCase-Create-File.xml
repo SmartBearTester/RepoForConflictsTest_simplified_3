@@ -5,16 +5,17 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="CreateAndWaitForRemoveFile" name="Create File" id="b595ba57-6eee-49d2-a10c-63cec4c4284a">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
-      <FileName>qwerty.txt</FileName>
-      <FileContent>asdfgh</FileContent>
-      <FolderPath>D:\Temp\Reports\</FolderPath>
-      <Timeout>666000</Timeout>
-      <WaitForFileRemove>true</WaitForFileRemove>
+      <FileName>Remote.tmp</FileName>
+      <FileContent>Remote values</FileContent>
+      <FolderPath>D:\Remote\Reports\</FolderPath>
+      <Timeout>888000</Timeout>
+      <WaitForFileRemove>false</WaitForFileRemove>
       <OverwriteExisting>true</OverwriteExisting>
       <FileEncoding>Unicode</FileEncoding>
-      <Precision>seconds</Precision>
+      <Precision>milliseconds</Precision>
     </con:config>
   </con:testStep>
   <con:properties/>

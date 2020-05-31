@@ -5,17 +5,18 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="sendmailteststep" name="Send Mail" id="163c888d-c01c-4777-96dc-6478c4e68df4">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
-      <subject>qwerty</subject>
-      <message>qwerty</message>
-      <server>qwerty</server>
-      <port>25</port>
-      <login>qwerty</login>
-      <password>qwerty</password>
-      <mailTo>qwerty</mailTo>
-      <mailFrom>qwerty</mailFrom>
-      <timeout>0</timeout>
+      <subject>Remote values</subject>
+      <message>Remote values</message>
+      <server>Remote values</server>
+      <port>47</port>
+      <login>Remote values</login>
+      <password>Remote values</password>
+      <mailTo>Remote values</mailTo>
+      <mailFrom>Remote values</mailFrom>
+      <timeout>8888</timeout>
       <timeout_measure>0</timeout_measure>
       <StartTLSEnabled>false</StartTLSEnabled>
     </con:config>

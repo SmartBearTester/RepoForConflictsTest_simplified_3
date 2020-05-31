@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:loadUiTest name="Load Test 1" id="810820f8-9a7d-4135-b27c-400547c16912" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>Remote values</con:description>
   <con:settings>
     <con:setting id="soapUIObjectSourceId">bb8d5a47-4d4f-4b83-bede-179c3370d49f</con:setting>
     <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
@@ -13,13 +14,13 @@
       <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
       <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
       <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
-      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
+      <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">88</con1:property>
       <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Relative</con1:property>
       <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
       <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">810820f8-9a7d-4135-b27c-400547c16912</con1:property>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=30;</con1:property>
+      <con1:property key="limits">Time=88;</con1:property>
     </con1:attributes>
     <con1:addons>
       <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="47932326-5791-47fa-b397-cae6ac85cc5a">
@@ -27,9 +28,9 @@
           <con1:property key="parentId">e0ddab67-ffd2-480f-ad3d-2ee63f4a5978</con1:property>
           <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkZTBkZGFiNjctZmZkMi00ODBmLWFkM2QtMmVlNjNmNGE1OTc4dAAEbWFpbnQAB0FWRVJBR0V0AApUaW1lIFRha2Vu</con1:property>
           <con1:property key="Labeled@label">Time Taken - average</con1:property>
-          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECJAAAAAAAAAAAAAAAAAAA=</con1:property>
-          <con1:property key="tolerancePeriod">0</con1:property>
-          <con1:property key="toleranceAllowedOccurrences">0</con1:property>
+          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECLwAAAAAAAQCAAAAAAAAA=</con1:property>
+          <con1:property key="tolerancePeriod">8000</con1:property>
+          <con1:property key="toleranceAllowedOccurrences">8</con1:property>
           <con1:property key="stopTestOnFailure">false</con1:property>
         </con1:attributes>
         <con1:addons/>
@@ -39,10 +40,10 @@
           <con1:property key="parentId">e0ddab67-ffd2-480f-ad3d-2ee63f4a5978</con1:property>
           <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkZTBkZGFiNjctZmZkMi00ODBmLWFkM2QtMmVlNjNmNGE1OTc4dAAEbWFpbnQAA01BWHQAClRpbWUgVGFrZW4=</con1:property>
           <con1:property key="Labeled@label">Time Taken - max</con1:property>
-          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECJAAAAAAAAAAAAAAAAAAA=</con1:property>
-          <con1:property key="tolerancePeriod">0</con1:property>
-          <con1:property key="toleranceAllowedOccurrences">0</con1:property>
-          <con1:property key="stopTestOnFailure">false</con1:property>
+          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECLwAAAAAAAQCAAAAAAAAA=</con1:property>
+          <con1:property key="tolerancePeriod">8000</con1:property>
+          <con1:property key="toleranceAllowedOccurrences">8</con1:property>
+          <con1:property key="stopTestOnFailure">true</con1:property>
         </con1:attributes>
         <con1:addons/>
       </con1:addon>
@@ -51,9 +52,9 @@
           <con1:property key="parentId">e0ddab67-ffd2-480f-ad3d-2ee63f4a5978</con1:property>
           <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkZTBkZGFiNjctZmZkMi00ODBmLWFkM2QtMmVlNjNmNGE1OTc4dAAEbWFpbnQAClBFUl9TRUNPTkR0AAhGYWlsdXJlcw==</con1:property>
           <con1:property key="Labeled@label">Failures - per second</con1:property>
-          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cD/wAAAAAAAAAAAAAAAAAAA=</con1:property>
-          <con1:property key="tolerancePeriod">0</con1:property>
-          <con1:property key="toleranceAllowedOccurrences">0</con1:property>
+          <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECLwAAAAAAAQCAAAAAAAAA=</con1:property>
+          <con1:property key="tolerancePeriod">8000</con1:property>
+          <con1:property key="toleranceAllowedOccurrences">8</con1:property>
           <con1:property key="stopTestOnFailure">false</con1:property>
         </con1:attributes>
         <con1:addons/>
@@ -64,14 +65,27 @@
         <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
         <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
         <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
-        <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+        <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">88</con1:property>
         <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=30;</con1:property>
+        <con1:property key="limits">Time=88;</con1:property>
       </con1:attributes>
-      <con1:addons/>
+      <con1:addons>
+        <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="c4e7ca2e-ef9e-433d-8545-47e390a893fc">
+          <con1:attributes>
+            <con1:property key="parentId">3cfd6e3b-1679-48c6-a1a9-5ed092b07fcb</con1:property>
+            <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkM2NmZDZlM2ItMTY3OS00OGM2LWExYTktNWVkMDkyYjA3ZmNidAAEbWFpbnQABVRPVEFMdAAEU2VudA==</con1:property>
+            <con1:property key="Labeled@label">Sent - total</con1:property>
+            <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECLwAAAAAAAQCAAAAAAAAA=</con1:property>
+            <con1:property key="tolerancePeriod">8000</con1:property>
+            <con1:property key="toleranceAllowedOccurrences">8</con1:property>
+            <con1:property key="stopTestOnFailure">false</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:addon>
+      </con1:addons>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="412a2741-4339-4464-b3fb-466fce64a1ab" category="Scheduler">
         <con1:properties>
           <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
@@ -96,7 +110,7 @@
           <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
           <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
           <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">bb8d5a47-4d4f-4b83-bede-179c3370d49f</con1:property>
+          <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">01df4d57-6766-49c4-8127-be57300d26f5</con1:property>
           <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
@@ -115,7 +129,7 @@
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
           <con1:property propagates="true" key="baseVU" type="java.lang.Long">0</con1:property>
-          <con1:property propagates="true" key="peakVU" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="peakVU" type="java.lang.Long">77</con1:property>
           <con1:property propagates="true" key="rampUpDuration" type="java.lang.Long">300</con1:property>
           <con1:property propagates="true" key="rampDownDuration" type="java.lang.Long">300</con1:property>
           <con1:property propagates="true" key="peakDuration" type="java.lang.Long">3000</con1:property>
@@ -139,8 +153,8 @@
 // Uncomment the line below to log all the transactions whose responses contain 'CAPTCHA'.
 //soapui_context.response.contains('CAPTCHA')</con1:property>
           <con1:property propagates="true" key="valueName" type="java.lang.String">TimeTaken</con1:property>
-          <con1:property propagates="true" key="max" type="java.lang.Long">1000</con1:property>
-          <con1:property propagates="true" key="min" type="java.lang.Long">1</con1:property>
+          <con1:property propagates="true" key="max" type="java.lang.Long">88000</con1:property>
+          <con1:property propagates="true" key="min" type="java.lang.Long">8</con1:property>
           <con1:property propagates="true" key="enabled" type="java.lang.Boolean">true</con1:property>
         </con1:properties>
         <con1:attributes>
@@ -182,26 +196,21 @@
         <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="Peak Statistics" groupType="Graph">
           <con1:chart statisticHolder="e0ddab67-ffd2-480f-ad3d-2ee63f4a5978">
             <con1:attributes>
-              <con1:property key="_CHART_segments">67:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597810:Time Taken7:AVERAGE4:main63:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597810:Time Taken3:MAX4:main65:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597810:Running VU5:TOTAL4:main68:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a59788:Failures10:PER_SECOND4:main</con1:property>
+              <con1:property key="_CHART_segments">65:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597810:Running VU5:TOTAL4:main68:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a59788:Failures10:PER_SECOND4:main73:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597818:Assertion Failures5:TOTAL4:main79:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597818:Assertion Failures10:PER_SECOND4:main</con1:property>
             </con1:attributes>
           </con1:chart>
           <con1:attributes>
             <con1:property key="GroupId">82882ae2-19fe-4b85-b6ad-33fcbb88c92e</con1:property>
           </con1:attributes>
         </con1:chartGroup>
-        <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="New Statistics Group" groupType="Table">
+        <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="Remote Statistics Group" groupType="Table">
           <con1:chart statisticHolder="e0ddab67-ffd2-480f-ad3d-2ee63f4a5978">
             <con1:attributes>
-              <con1:property key="_CHART_segments">68:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a59788:Failures10:PER_SECOND4:main75:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597814:Test case runs10:PER_SECOND4:main</con1:property>
-            </con1:attributes>
-          </con1:chart>
-          <con1:chart statisticHolder="3cfd6e3b-1679-48c6-a1a9-5ed092b07fcb">
-            <con1:attributes>
-              <con1:property key="_CHART_segments">66:36:3cfd6e3b-1679-48c6-a1a9-5ed092b07fcb10:Time Taken6:MEDIAN4:main</con1:property>
+              <con1:property key="_CHART_segments">73:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597818:Assertion Failures5:TOTAL4:main79:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597818:Assertion Failures10:PER_SECOND4:main74:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597819:Executed Test Steps5:TOTAL4:main80:36:e0ddab67-ffd2-480f-ad3d-2ee63f4a597819:Executed Test Steps10:PER_SECOND4:main</con1:property>
             </con1:attributes>
           </con1:chart>
           <con1:attributes>
-            <con1:property key="GroupId">863c3253-737d-4e97-9869-67eecc44f2d6</con1:property>
+            <con1:property key="GroupId">dccd79a5-1666-4b42-a43a-9a10396efa16</con1:property>
           </con1:attributes>
         </con1:chartGroup>
       </con1:page>
@@ -214,12 +223,8 @@
   <con:loadUIPanelData id="a5863a6e-457b-4aff-ad0f-35d622537a0a">
     <con:panel>Log</con:panel>
   </con:loadUIPanelData>
-  <con:setupScript>// The following code executes a test case before running the load test.
- // You can use it, for example, to prepare an environment or to set tokens in request authentication parameters.
- //def project = loadTestRunner.getLoadTest().getTestCase().getTestSuite().getProject()
- //project.getTestSuiteByName("TestSuite").getTestCaseByName("set auth").run(null, false)
- log.info("Start")</con:setupScript>
-  <con:teardownScript>log.info("Finish")</con:teardownScript>
+  <con:setupScript>log.info("Remote values")</con:setupScript>
+  <con:teardownScript>log.info("Remote values")</con:teardownScript>
   <con:statistics id="82882ae2-19fe-4b85-b6ad-33fcbb88c92e"/>
   <con:reportParameters>
     <con:property>

@@ -3,29 +3,6 @@
   <con:settings>
     <con:setting id="cc21ae8d-6f26-484f-a716-f5502c34e549fileName">XmlRpc.TestBoolean</con:setting>
   </con:settings>
-  <con:call id="ddf6e241-232f-4bef-8419-c177e560a8c9" name="Request">
-    <con:settings/>
-    <con:encoding>UTF-8</con:encoding>
-    <con:endpoint>http://rapis02.aqa.com.ru/xmlrpc/xmlrpcapi.rem</con:endpoint>
-    <con:request><![CDATA[<methodCall>
-<methodName>XmlRpc.TestBoolean</methodName>
-<params>
-<param><value><boolean></boolean></value></param>
-</params>
-</methodCall>]]></con:request>
-    <con:credentials>
-      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-      <con:authType>No Authorization</con:authType>
-    </con:credentials>
-    <con:environmentSpec>
-      <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
-        <con:authProfile>Inherit From Parent</con:authProfile>
-      </con:entry>
-      <con:entry environmentId="13b59651-66de-4c68-940f-45d0a507fba6">
-        <con:authProfile>No Authorization</con:authProfile>
-      </con:entry>
-    </con:environmentSpec>
-  </con:call>
   <con:resultParameter>boolean</con:resultParameter>
   <con:parameter>boolean</con:parameter>
   <con:environmentSpec>

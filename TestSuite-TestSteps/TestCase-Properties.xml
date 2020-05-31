@@ -5,16 +5,21 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="properties" name="Properties" id="c0d73ab2-0ef2-465b-a6ac-5fa33386d740">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:properties>
         <con:property>
           <con:name>my-property-1</con:name>
-          <con:value>qwerty</con:value>
+          <con:value>Remote values</con:value>
         </con:property>
         <con:property>
-          <con:name>my-property-2</con:name>
-          <con:value>asdfgh</con:value>
+          <con:name>remote-property-1</con:name>
+          <con:value>zzzzz</con:value>
+        </con:property>
+        <con:property>
+          <con:name>remote-property-2</con:name>
+          <con:value>Test</con:value>
         </con:property>
       </con:properties>
     </con:config>

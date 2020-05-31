@@ -41,24 +41,24 @@
         <con:style>QUERY</con:style>
         <con:default>qwerty</con:default>
       </con:parameter>
-      <con:parameter>
-        <con:name>my-param-2</con:name>
-        <con:value>asdfghjj</con:value>
+      <con:parameter required="true">
+        <con:name>remote-param-1</con:name>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>asdfghjj</con:default>
+        <con:default/>
       </con:parameter>
     </con:parameters>
     <con:request name="Request 1" id="f2b70a38-4b58-40b3-bc80-578c61f44d3e" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
+      <con:endpoint>http://remote.values.com</con:endpoint>
       <con:request>{
-  "StrValue": "sample string 1",
-  "IntValue": 2,
+  "StrValue": "Remote values",
+  "IntValue": 888,
   "DoubleList": [
-    1.1,
-    2.1
+    8.9,
+    99.88
   ]
 }</con:request>
       <con:originalUri>http://rapis02.aqa.com.ru/WebAPI2/api/Complex</con:originalUri>
@@ -67,10 +67,13 @@
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="my-param-1" value="Remote values"/>
+        <con:entry key="remote-param-1" value="zzzz"/>
+      </con:parameters>
       <con:parameterOrder>
         <con:entry>my-param-1</con:entry>
-        <con:entry>my-param-2</con:entry>
+        <con:entry>remote-param-1</con:entry>
       </con:parameterOrder>
       <con:environmentSpec>
         <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">
@@ -80,6 +83,22 @@
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
       </con:environmentSpec>
+    </con:request>
+    <con:request name="remote" id="87aef52a-ae54-477a-9c04-f413361aed6d" mediaType="text/xml" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8080/</con:endpoint>
+      <con:request>Remote values</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="my-param-1" value="zzz"/>
+        <con:entry key="remote-param-1" value="Remote values"/>
+      </con:parameters>
     </con:request>
     <con:environmentSpec>
       <con:entry environmentId="18faa61a-6d45-42b4-9706-7812ec74b1a6">

@@ -5,16 +5,17 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="MQTTReceiveTestStep" name="Receive MQTT Message" id="cacc2cc7-edbc-4ffd-9a05-576b78d5bbdb">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
       <LegacyConnection>false</LegacyConnection>
-      <ConnectionName>mosquitto</ConnectionName>
-      <Timeout>30000</Timeout>
+      <ConnectionName>Remote</ConnectionName>
+      <Timeout>888000</Timeout>
       <TimeoutMeasure>Seconds</TimeoutMeasure>
-      <ListenedTopics>qwerty</ListenedTopics>
-      <QoS>0</QoS>
-      <ExpectedMessageType>Utf8Text</ExpectedMessageType>
-      <OnUnexpectedTopic>Ignore</OnUnexpectedTopic>
+      <ListenedTopics>Remote values</ListenedTopics>
+      <QoS>2</QoS>
+      <ExpectedMessageType>BinaryData</ExpectedMessageType>
+      <OnUnexpectedTopic>Fail</OnUnexpectedTopic>
     </con:config>
   </con:testStep>
   <con:properties/>

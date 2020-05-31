@@ -7,6 +7,7 @@
   <con:testStep type="graphqltestrequest" name="GraphQL Request" id="6b71544b-5085-4bcd-b98e-a7b3aee81c8a">
     <con:settings/>
     <con:config xsi:type="con:GraphQLTestRequest" id="59c19935-9a1c-4694-80bc-c4184831a183" name="GraphQL Request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:description>Remote values</con:description>
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
   &lt;con:entry key="my-header-1" value="qwerty"/>

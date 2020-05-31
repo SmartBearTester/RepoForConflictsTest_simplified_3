@@ -8,14 +8,15 @@
     <con:settings/>
     <con:config interface="GraphQL Service 1" operationName="customer" operationType="query" xsi:type="con:GraphQLTestRequestWithSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:request name="GraphQL Query" id="5ea6e99b-843a-49e8-a0aa-d6bab4106e91">
+        <con:description>Remote values</con:description>
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
   &lt;con:entry key="my-header-1" value="qwerty"/>
   &lt;con:entry key="my-header-2" value="asdfgh"/>
 &lt;/xml-fragment></con:setting>
         </con:settings>
-        <con:endpoint>http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
-        <con:request>{"query":"query {\n  customer(id: $my_query_variable_1) {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":{"my_query_variable_1":"qwerty"}}</con:request>
+        <con:endpoint>http://remote.values.com</con:endpoint>
+        <con:request>{"query":"query {\n  customer(id: $my_remote_variable_1) {\n    id\n    name\n    email\n    age\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":{"my_remote_variable_1":"Remote values"}}</con:request>
         <con:credentials>
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

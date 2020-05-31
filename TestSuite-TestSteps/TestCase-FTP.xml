@@ -5,16 +5,17 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="ftp" name="FTP" id="27dfc8cc-43fe-4d92-8610-339724ebae77">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:FTPTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:host>qwerty</con:host>
-      <con:port>25</con:port>
-      <con:user>asdfgh</con:user>
-      <con:password>zxcvbn</con:password>
+      <con:host>Remote</con:host>
+      <con:port>47</con:port>
+      <con:user>Remote</con:user>
+      <con:password>Remote</con:password>
       <con:transaction>
-        <con:fileName>zxcvbn</con:fileName>
-        <con:localPath>qwerty</con:localPath>
-        <con:serverPath>asdfgh</con:serverPath>
+        <con:fileName>Remote</con:fileName>
+        <con:localPath>Remote</con:localPath>
+        <con:serverPath>Remote</con:serverPath>
       </con:transaction>
     </con:config>
   </con:testStep>

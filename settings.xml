@@ -14,36 +14,39 @@
     <CleanSession>false</CleanSession>
   </Connection>
   <Connection>
-    <Name>qwerty</Name>
-    <ServerURI>qwerty</ServerURI>
+    <Name>Remote</Name>
+    <ServerURI>Remote</ServerURI>
     <caCrtFile/>
     <crtFile/>
     <keyFile/>
     <keysPassword/>
     <sniHost/>
-    <ClientID>asdfgh</ClientID>
+    <ClientID>Remote</ClientID>
     <CleanSession>false</CleanSession>
-    <Login>qwerty</Login>
-    <EncrPassword>553246736447566B583139434D733568774343384F75524A37584A2F4D624957</EncrPassword>
-    <WillTopic>qwerty</WillTopic>
+    <Login>Remote</Login>
+    <EncrPassword>553246736447566B58312F5A57384254715548637A4A7532625063496D5A4147</EncrPassword>
+    <WillTopic>Remote</WillTopic>
     <WillMessageType>Json</WillMessageType>
-    <WillMessage>qwerty</WillMessage>
-    <WillQos>0</WillQos>
-    <WillRetained>false</WillRetained>
+    <WillMessage>Remote values</WillMessage>
+    <WillQos>2</WillQos>
+    <WillRetained>true</WillRetained>
   </Connection>
 </xml-fragment>]]></con:setting>
     <con:setting id="41e257e4-c0ad-4781-8b44-9aacd14c3154fileName">project-for-git-conflicts-test</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:endpoint mode="COMPLEMENT" username="Remote" password="Remote" domain="Remote">http://remote.values.com</con:endpoint>
+  </con:endpointStrategy>
   <con:requirements/>
   <con:properties>
     <con:property>
       <con:name>my-project-property-1</con:name>
-      <con:value>qwerty</con:value>
+      <con:value>Remote values</con:value>
     </con:property>
     <con:property>
-      <con:name>my-project-property-2</con:name>
-      <con:value>asdfgh</con:value>
+      <con:name>my-project-property-remote</con:name>
+      <con:value>zzzz</con:value>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -51,15 +54,15 @@
     <con:databaseConnection>
       <con:name>MSSQL</con:name>
       <con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver>
-      <con:connectionString>jdbc:sqlserver://rapis01.aqa.com.ru:1433;databaseName=DatabaseVariable;user=DatabaseVariable;password=PASS_VALUE</con:connectionString>
-      <con:password>DatabaseVariable</con:password>
+      <con:connectionString>jdbc:sqlserver://Remote.aqa.com.ru:1488;databaseName=Remote;user=Remote;password=PASS_VALUE</con:connectionString>
+      <con:password>Remote</con:password>
       <con:connectionProperties/>
     </con:databaseConnection>
     <con:databaseConnection>
-      <con:name>Postgre</con:name>
-      <con:driver>org.postgresql.Driver</con:driver>
-      <con:connectionString>jdbc:postgresql://rapis01.aqa.com.ru:5432/DatabaseVariable?user=DatabaseVariable&amp;password=PASS_VALUE</con:connectionString>
-      <con:password>DatabaseVariable</con:password>
+      <con:name>Remote</con:name>
+      <con:driver>org.hsql.jdbcDriver</con:driver>
+      <con:connectionString>jdbc:HypersonicSQL:Remote?user=Remote&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>Remote</con:password>
       <con:connectionProperties/>
     </con:databaseConnection>
   </con:databaseConnectionContainer>
@@ -67,19 +70,19 @@
     <con:jmsConnection>
       <con:name>ActiveMQ</con:name>
       <con:connectorLabel xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-      <con:initialContextFactory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</con:initialContextFactory>
-      <con:providerUrl>tcp://localhost:61616</con:providerUrl>
-      <con:connectionFactory>ConnectionFactory</con:connectionFactory>
+      <con:initialContextFactory>org.apache.activemq.jndi.Remote</con:initialContextFactory>
+      <con:providerUrl>tcp://Remote:61616</con:providerUrl>
+      <con:connectionFactory>Remote</con:connectionFactory>
       <con:username/>
       <con:password/>
       <con:extraProperties>
         <con:property>
           <con:name>queue.Q1</con:name>
-          <con:value>Q1</con:value>
+          <con:value>Remote</con:value>
         </con:property>
         <con:property>
-          <con:name>queue.Q2</con:name>
-          <con:value>Q2</con:value>
+          <con:name>queue.Remote</con:name>
+          <con:value>zzzz</con:value>
         </con:property>
       </con:extraProperties>
     </con:jmsConnection>
@@ -88,23 +91,25 @@
     <con:oAuth2Profile>
       <con:name>MyOauth20</con:name>
       <con:type>OAuth 2.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:idToken>asdfgh</con:idToken>
+      <con:idToken>Remote</con:idToken>
       <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
       <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
     </con:oAuth2Profile>
     <con:oAuth2Profile>
       <con:name>MyOauthJwt</con:name>
       <con:type>OAuth 2.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:idToken>asdfgh</con:idToken>
+      <con:idToken>Remote</con:idToken>
       <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
       <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
     </con:oAuth2Profile>
@@ -113,10 +118,11 @@
     <con:oAuth1Profile>
       <con:name>MyOauth10</con:name>
       <con:type>OAuth 1.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:tokenSecret>asdfgh</con:tokenSecret>
+      <con:tokenSecret>Remote</con:tokenSecret>
       <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>
       <con:tokenSecretStartingStatus>ENTERED_MANUALLY</con:tokenSecretStartingStatus>
     </con:oAuth1Profile>
@@ -171,7 +177,7 @@
       <con:value/>
     </con:property>
     <con:property>
-      <con:name>my-project-property-2</con:name>
+      <con:name>my-project-property-remote</con:name>
       <con:value/>
     </con:property>
     <con:databaseConnectionContainer>
@@ -180,7 +186,10 @@
         <con:connectionProperties/>
       </con:databaseConnection>
       <con:databaseConnection>
-        <con:name>Postgre</con:name>
+        <con:name>Remote</con:name>
+        <con:driver>org.hsql.jdbcDriver</con:driver>
+        <con:connectionString>jdbc:HypersonicSQL:Remote?user=Remote&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Remote</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
@@ -212,7 +221,7 @@
       <con:value>qwerty</con:value>
     </con:property>
     <con:property>
-      <con:name>my-project-property-2</con:name>
+      <con:name>my-project-property-remote</con:name>
       <con:value>asdfgh</con:value>
     </con:property>
     <con:databaseConnectionContainer>
@@ -224,10 +233,10 @@
         <con:connectionProperties/>
       </con:databaseConnection>
       <con:databaseConnection>
-        <con:name>Postgre</con:name>
-        <con:driver>org.postgresql.Driver</con:driver>
-        <con:connectionString>jdbc:postgresql://rapis01.aqa.com.ru:5432/DatabaseVariable?user=DatabaseVariable&amp;password=PASS_VALUE</con:connectionString>
-        <con:password>DatabaseVariable</con:password>
+        <con:name>Remote</con:name>
+        <con:driver>org.hsql.jdbcDriver</con:driver>
+        <con:connectionString>jdbc:HypersonicSQL:Remote?user=Remote&amp;password=PASS_VALUE</con:connectionString>
+        <con:password>Remote</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
@@ -257,72 +266,76 @@
     <con:basicAuthEntry>
       <con:name>MyBasicAuth</con:name>
       <con:type>Basic</con:type>
-      <con:username>qwerty</con:username>
-      <con:password>asdfgh</con:password>
+      <con:username>Remote</con:username>
+      <con:password>Remote</con:password>
       <con:domain/>
     </con:basicAuthEntry>
     <con:digestAuthEntry>
       <con:name>MyDigestAuth</con:name>
       <con:type>Digest</con:type>
-      <con:username>qwerty</con:username>
-      <con:password>asdfgh</con:password>
-      <con:domain>zxcvbn</con:domain>
+      <con:username>Remote</con:username>
+      <con:password>Remote</con:password>
+      <con:domain>Remote</con:domain>
     </con:digestAuthEntry>
     <con:ntlmAuthEntry>
       <con:name>MyNtlmAuth</con:name>
       <con:type>NTLM</con:type>
-      <con:username>qwerty</con:username>
-      <con:password>asdfgh</con:password>
-      <con:domain>zxcvbn</con:domain>
+      <con:username>Remote</con:username>
+      <con:password>Remote</con:password>
+      <con:domain>Remote</con:domain>
     </con:ntlmAuthEntry>
     <con:kerberosAuthEntry>
       <con:name>MyKerberosAuth</con:name>
       <con:type>SPNEGO/Kerberos</con:type>
-      <con:username>qwerty</con:username>
-      <con:password>asdfgh</con:password>
-      <con:domain>zxcvbn</con:domain>
+      <con:username>Remote</con:username>
+      <con:password>Remote</con:password>
+      <con:domain>Remote</con:domain>
     </con:kerberosAuthEntry>
     <con:oAuth20AuthEntry>
       <con:name>MyOauth20</con:name>
       <con:type>OAuth 2.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:idToken>asdfgh</con:idToken>
+      <con:idToken>Remote</con:idToken>
       <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
       <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
     </con:oAuth20AuthEntry>
     <con:oAuth20AuthEntry>
       <con:name>MyOauthJwt</con:name>
       <con:type>OAuth 2.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:oAuth2Flow>JWT_GRANT</con:oAuth2Flow>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:idToken>asdfgh</con:idToken>
+      <con:idToken>Remote</con:idToken>
       <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
       <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
     </con:oAuth20AuthEntry>
     <con:oAuth20AzureAuthEntry>
       <con:name>MyOauth20Azure</con:name>
       <con:type>OAuth 2.0 (Azure)</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
       <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:idToken>asdfgh</con:idToken>
+      <con:idToken>Remote</con:idToken>
       <con:idTokenStatus>ENTERED_MANUALLY</con:idTokenStatus>
       <con:idTokenStartingStatus>ENTERED_MANUALLY</con:idTokenStartingStatus>
     </con:oAuth20AzureAuthEntry>
     <con:oAuth10AuthEntry>
       <con:name>MyOauth10</con:name>
       <con:type>OAuth 1.0</con:type>
-      <con:accessToken>qwerty</con:accessToken>
+      <con:accessToken>Remote</con:accessToken>
       <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
       <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:tokenSecret>asdfgh</con:tokenSecret>
+      <con:tokenSecret>Remote</con:tokenSecret>
       <con:tokenSecretStatus>ENTERED_MANUALLY</con:tokenSecretStatus>
       <con:tokenSecretStartingStatus>ENTERED_MANUALLY</con:tokenSecretStartingStatus>
     </con:oAuth10AuthEntry>

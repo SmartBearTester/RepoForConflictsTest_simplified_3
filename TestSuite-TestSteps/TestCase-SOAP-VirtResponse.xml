@@ -5,23 +5,32 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="mockresponse" name="SOAP VirtResponse" id="20bf7741-88f8-4d47-a96b-5b9c28f1b25c">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config xsi:type="con:MockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>Test_serviceSoap</con:interface>
       <con:operation>Con_Stroka</con:operation>
-      <con:path>/</con:path>
-      <con:port>8091</con:port>
-      <con:response id="4bc892f2-fad6-4151-ac18-8d5192fb0f90">
+      <con:path>/Remote/</con:path>
+      <con:port>8098</con:port>
+      <con:response id="4bc892f2-fad6-4151-ac18-8d5192fb0f90" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
         <con:settings/>
         <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost/test_service/Service1.asmx">
    <soapenv:Header/>
    <soapenv:Body>
       <ser:Con_StrokaResponse>
          <!--Optional:-->
-         <ser:Con_StrokaResult>?</ser:Con_StrokaResult>
+         <ser:Con_StrokaResult>Remote values</ser:Con_StrokaResult>
       </ser:Con_StrokaResponse>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:responseContent>
+        <con:header>
+          <con:name>my-header-1</con:name>
+          <con:value>Remote values</con:value>
+        </con:header>
+        <con:header>
+          <con:name>remote-header-1</con:name>
+          <con:value>zzz</con:value>
+        </con:header>
         <con:wsaConfig mustUnderstand="NONE" version="200508"/>
       </con:response>
     </con:config>

@@ -8,11 +8,11 @@
   <con:properties>
     <con:property>
       <con:name>my-test-suite-property-1</con:name>
-      <con:value>qwerty</con:value>
+      <con:value>Remote values</con:value>
     </con:property>
     <con:property>
-      <con:name>my-test-suite-property-2</con:name>
-      <con:value>asdfgh</con:value>
+      <con:name>my-test-suite-property-remote</con:name>
+      <con:value>zzzz</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

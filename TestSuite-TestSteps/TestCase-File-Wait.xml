@@ -5,11 +5,12 @@
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="fileWaitTestStep" name="File Wait" id="4195cd91-cfa4-48af-99d2-904474f1ade2">
+    <con:description>Remote values</con:description>
     <con:settings/>
     <con:config>
-      <FileName>D:\Temp\Reports\test-case-log.txt</FileName>
-      <Timeout>0</Timeout>
-      <timeout_measure>0</timeout_measure>
+      <FileName>D:\Remote\Reports\Remote.tmp</FileName>
+      <Timeout>888000</Timeout>
+      <timeout_measure>1</timeout_measure>
       <DeleteFile>false</DeleteFile>
     </con:config>
   </con:testStep>

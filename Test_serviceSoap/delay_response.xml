@@ -16,7 +16,7 @@
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
-      <con:selectedAuthProfile>MyNtlmAuth</con:selectedAuthProfile>
+      <con:selectedAuthProfile>MyDigestAuth</con:selectedAuthProfile>
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

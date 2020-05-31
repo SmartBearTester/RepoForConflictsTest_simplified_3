@@ -14,7 +14,7 @@
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
-      <con:selectedAuthProfile>MyBasicAuth</con:selectedAuthProfile>
+      <con:selectedAuthProfile>MyKerberosAuth</con:selectedAuthProfile>
       <con:authType>No Authorization</con:authType>
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

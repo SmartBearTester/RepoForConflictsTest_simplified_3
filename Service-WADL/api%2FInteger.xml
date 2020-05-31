@@ -12,7 +12,7 @@
       <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
       <con:request/>
       <con:credentials>
-        <con:selectedAuthProfile>MyOauth10</con:selectedAuthProfile>
+        <con:selectedAuthProfile>MyNtlmAuth</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -55,7 +55,7 @@
       <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
       <con:request/>
       <con:credentials>
-        <con:selectedAuthProfile>MyOauth20</con:selectedAuthProfile>
+        <con:selectedAuthProfile>MyDigestAuth</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -83,7 +83,7 @@
       <con:endpoint>http://rapis02.aqa.com.ru</con:endpoint>
       <con:request/>
       <con:credentials>
-        <con:selectedAuthProfile>MyOauth20Azure</con:selectedAuthProfile>
+        <con:selectedAuthProfile>MyBasicAuth</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

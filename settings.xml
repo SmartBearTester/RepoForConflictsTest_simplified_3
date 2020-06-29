@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="41e257e4-c0ad-4781-8b44-9aacd14c3154" created="3.2.0" activeEnvironment="Default environment" name="project-for-git-conflicts-test" updated="3.2.0" encryptionMode="Not encrypted" resourceRoot="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="41e257e4-c0ad-4781-8b44-9aacd14c3154" created="3.2.0" activeEnvironment="Default environment" name="project-for-git-conflicts-test" updated="3.2.7" encryptionMode="Not encrypted" resourceRoot="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="MQTTConnections"><![CDATA[<xml-fragment>
-  <Connection>
-    <Name>mosquitto</Name>
-    <ServerURI>mosquitto.org</ServerURI>
-    <caCrtFile/>
-    <crtFile/>
-    <keyFile/>
-    <keysPassword/>
-    <sniHost/>
-    <ClientID>qwerty</ClientID>
-    <CleanSession>false</CleanSession>
-  </Connection>
-  <Connection>
-    <Name>Remote</Name>
-    <ServerURI>Remote</ServerURI>
-    <caCrtFile/>
-    <crtFile/>
-    <keyFile/>
-    <keysPassword/>
-    <sniHost/>
-    <ClientID>Remote</ClientID>
-    <CleanSession>false</CleanSession>
-    <WillTopic>Remote</WillTopic>
-    <WillMessageType>Json</WillMessageType>
-    <WillMessage>Remote values</WillMessage>
-    <WillQos>2</WillQos>
-    <WillRetained>true</WillRetained>
-  </Connection>
-</xml-fragment>]]></con:setting>
     <con:setting id="41e257e4-c0ad-4781-8b44-9aacd14c3154fileName">project-for-git-conflicts-test</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -152,21 +123,6 @@
 // fos.close()</con:script>
   </con:eventHandlers>
   <con:environment id="18faa61a-6d45-42b4-9706-7812ec74b1a6" name="EmptyEnv" index="0">
-    <con:service type="SOAP" name="Test_serviceSoap">
-      <con:endpoint authProfile="No Authorization"/>
-    </con:service>
-    <con:service type="SOAP" name="Test_serviceSoap12">
-      <con:endpoint authProfile="No Authorization"/>
-    </con:service>
-    <con:service type="REST" name="Service WADL">
-      <con:endpoint authProfile="No Authorization"/>
-    </con:service>
-    <con:service type="REST" name="Service Swagger">
-      <con:endpoint authProfile="No Authorization"/>
-    </con:service>
-    <con:service type="GraphQL" name="GraphQL Service 1">
-      <con:endpoint authProfile="No Authorization"/>
-    </con:service>
     <con:property>
       <con:name>my-project-property-1</con:name>
       <con:value/>
@@ -196,21 +152,6 @@
     </con:jmsConnectionContainer>
   </con:environment>
   <con:environment id="13b59651-66de-4c68-940f-45d0a507fba6" name="MyEnv" index="1">
-    <con:service type="SOAP" name="Test_serviceSoap">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
-    </con:service>
-    <con:service type="SOAP" name="Test_serviceSoap12">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru/SOAP/Service1.asmx</con:endpoint>
-    </con:service>
-    <con:service type="REST" name="Service WADL">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8080/</con:endpoint>
-    </con:service>
-    <con:service type="REST" name="Service Swagger">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru</con:endpoint>
-    </con:service>
-    <con:service type="GraphQL" name="GraphQL Service 1">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://rapis02.aqa.com.ru:4000/schema.graphqls</con:endpoint>
-    </con:service>
     <con:property>
       <con:name>my-project-property-1</con:name>
       <con:value>qwerty</con:value>
